@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Prime Move — Reality Engine v1.3 HD</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Bebas+Neue&display=swap');
+
+```
+:root {
+  --void:   #03080a;
+  --split:  #e63946;
+  --ten:    #f4a261;
+  --merge:  #e9c46a;
+  --scar:   #2a9d8f;
+  --decay:  #457b9d;
+  --phi:    #a8dadc;
+  --gold:   #ffd700;
+  --text:   #f1faee;
+  --dim:    #3a5a62;
+  --border: #0f2027;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--void);
+  color: var(--text);
+  font-family: 'Space Mono', monospace;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  touch-action: none;
+}
+
+header {
+  padding: 8px 16px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #05111a 0%, #03080a 100%);
+}
+
+header h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+header span {
+  font-size: 0.55rem;
+  color: var(--dim);
+  letter-spacing: 1.5px;
+  opacity: 0.8;
+}
+
+/* ── Visual canvas (HD rendering) ── */
+#canvas {
+  width: 100%;
+  display: block;
+  cursor: crosshair;
+  flex-shrink: 0;
+  height: 44vh;
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* ── Math panel ── */
+.math-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--border);
+  overflow: hidden;
+  background: linear-gradient(180deg, #010a0d 0%, #000508 100%);
+}
+
+.math-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  background: rgba(15, 32, 39, 0.3);
+}
+
+.math-title {
+  font-size: 0.52rem;
+  letter-spacing: 2px;
+  color: var(--dim);
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.phi-badge {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--phi);
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px rgba(168, 218, 220, 0.4);
+  transition: all 0.3s ease;
+}
+
+.phi-badge.converged {
+  color: var(--gold);
+  text-shadow: 0 0 16px rgba(255, 215, 0, 0.6);
+}
+
+/* ── Ratio chart ── */
+.chart-wrap {
+  flex: 1;
+  position: relative;
+  padding: 8px 12px 4px;
+  overflow: hidden;
+}
+
+#ratio-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ── Stats row ── */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  background: rgba(6, 15, 20, 0.6);
+}
+
+.stat {
+  padding: 6px 8px;
+  border-right: 1px solid var(--border);
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.stat:last-child { border-right: none; }
+
+.stat-label {
+  font-size: 0.42rem;
+  color: var(--dim);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.stat-value {
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+#sv-phi { color: var(--phi); }
+#sv-phi.gold {
+  color: var(--gold);
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+}
+
+/* ── Controls ── */
+.controls {
+  display: flex;
+  flex-shrink: 0;
+  background: #05111a;
+}
+
+.controls button {
+  flex: 1;
+  padding: 12px 6px;
+  background: transparent;
+  color: var(--text);
+  border: none;
+  border-right: 1px solid var(--border);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.52rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.15s ease;
+}
+
+.controls button:last-child { border-right: none; }
+.controls button:active {
+  background: rgba(26, 42, 48, 0.8);
+  transform: scale(0.98);
+}
+.controls button.on {
+  color: var(--phi);
+  text-shadow: 0 0 8px rgba(168, 218, 220, 0.3);
+}
+
+/* ── Legend ── */
+.legend {
+  display: flex;
+  padding: 5px 16px;
+  gap: 10px;
+  background: linear-gradient(180deg, #020c10 0%, #000508 100%);
+  justify-content: center;
+  flex-shrink: 0;
+  border-top: 1px solid var(--border);
+}
+
+.li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.42rem;
+  color: var(--dim);
+  opacity: 0.85;
+}
+
+.ld {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px currentColor;
+}
+
+/* ── Toast ── */
+#toast {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(1, 10, 13, 0.96);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--phi);
+  padding: 16px 28px;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 99;
+  max-width: 88vw;
+  border-radius: 4px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+}
+
+#toast.show { opacity: 1; }
+#toast.gold {
+  opacity: 1;
+  border-color: var(--gold);
+  box-shadow: 0 8px 32px rgba(255, 215, 0, 0.3);
+}
+
+#toast strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: var(--phi);
+  letter-spacing: 3px;
+}
+
+#toast.gold strong {
+  color: var(--gold);
+  text-shadow: 0 0 16px rgba(255, 215, 0, 0.6);
+}
+```
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>PRIME MOVE</h1>
+  <span>v1.3 HD — DUAL TRACKER</span>
+</header>
+
+<canvas id="canvas"></canvas>
+
+<div class="math-panel">
+  <div class="math-header">
+    <span class="math-title">b(k+1)/b(k) — generational scar ratio → φ</span>
+    <span class="phi-badge" id="phi-badge">…</span>
+  </div>
+  <div class="chart-wrap">
+    <canvas id="ratio-canvas"></canvas>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat">
+    <span class="stat-label">Gen (k)</span>
+    <span class="stat-value" id="sv-gen">0</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label">b(k) scars</span>
+    <span class="stat-value" id="sv-scars">—</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label">Processes</span>
+    <span class="stat-value" id="sv-procs">0</span>
+  </div>
+  <div class="stat">
+    <span class="stat-label">φ ratio</span>
+    <span class="stat-value" id="sv-phi">…</span>
+  </div>
+</div>
+
+<div class="controls">
+  <button id="btn-play" class="on">⏸ PAUSE</button>
+  <button id="btn-seed">✦ SEED</button>
+  <button id="btn-reset">↺ RESET</button>
+  <button id="btn-speed">1× SPD</button>
+</div>
+
+<div class="legend">
+  <div class="li"><div class="ld" style="background:var(--split)"></div>SPLIT</div>
+  <div class="li"><div class="ld" style="background:var(--ten)"></div>TENSION</div>
+  <div class="li"><div class="ld" style="background:var(--merge)"></div>FM</div>
+  <div class="li"><div class="ld" style="background:var(--scar)"></div>SCAR</div>
+  <div class="li"><div class="ld" style="background:var(--decay)"></div>DECAY</div>
+  <div class="li"><div class="ld" style="background:#111"></div>VOID</div>
+</div>
+
+<div id="toast"><strong id="tt"></strong><span id="tm"></span></div>
+
+<script>
+// ═══════════════════════════════════════════════════════
+//  PRIME MOVE v1.3 HD — DUAL TRACKER
+//  Enhanced with anti-aliasing and smooth rendering
+// ═══════════════════════════════════════════════════════
+
+const PHI   = (1 + Math.sqrt(5)) / 2;
+const PHI_I = PHI - 1;
+
+// ── Visual grid (HIGHER RESOLUTION) ──
+const GSIZE  = 80;  // Increased from 50 for smoother appearance
+const VOID=0, SPLIT=1, TEN=2, MERGE=3, SCAR=4, DECAY=5;
+const GCOL = ['','#e63946','#f4a261','#e9c46a','#2a9d8f','#457b9d'];
+const SPEEDS = [1,2,4,8];
+let speedIdx = 0;
+let running  = true;
+
+let procImmature, procMature, genScars, ratioHistory, generation, totalScars, convergedOnce;
+let grid, visualScarsThisGen;
+
+const gCanvas = document.getElementById('canvas');
+const gCtx    = gCanvas.getContext('2d', { alpha: false });
+const rCanvas = document.getElementById('ratio-canvas');
+const rCtx    = rCanvas.getContext('2d', { alpha: true });
+
+// Enable anti-aliasing
+gCtx.imageSmoothingEnabled = true;
+gCtx.imageSmoothingQuality = 'high';
+rCtx.imageSmoothingEnabled = true;
+rCtx.imageSmoothingQuality = 'high';
+
+function resizeAll() {
+  // Use higher pixel ratio for sharper rendering
+  const dpr = window.devicePixelRatio || 1;
+  
+  gCanvas.width  = gCanvas.clientWidth  * dpr;
+  gCanvas.height = gCanvas.clientHeight * dpr;
+  rCanvas.width  = rCanvas.clientWidth  * dpr;
+  rCanvas.height = rCanvas.clientHeight * dpr;
+  
+  // Scale context to match DPR
+  gCtx.scale(dpr, dpr);
+  rCtx.scale(dpr, dpr);
+}
+resizeAll();
+window.addEventListener('resize', resizeAll);
+
+// ══════════════════════════════
+//  PURE MATH COUNTER
+// ══════════════════════════════
+
+function initCounter() {
+  procImmature = 1; procMature = 0; genScars = [0];
+  ratioHistory = []; generation = 0; totalScars = 0; convergedOnce = false;
+}
+
+function stepCounter() {
+  const newMature = procImmature + procMature;
+  const newImmature = procMature;
+  procMature = newMature; procImmature = newImmature;
+  const bk = procMature + procImmature;
+  totalScars += bk; genScars.push(bk);
+  if (genScars.length > 60) genScars.shift();
+  const len = genScars.length;
+  if (len >= 2 && genScars[len-2] > 0) {
+    const ratio = genScars[len-1] / genScars[len-2];
+    ratioHistory.push(ratio);
+    if (ratioHistory.length > 50) ratioHistory.shift();
+    return ratio;
+  }
+  return null;
+}
+
+// ══════════════════════════════
+//  VISUAL GRID
+// ══════════════════════════════
+
+function blankGrid() {
+  return Array.from({length:GSIZE}, () =>
+    Array.from({length:GSIZE}, () => ({s:VOID, lv:0, age:0}))
+  );
+}
+
+function plantSeed(g, cx, cy) {
+  const pattern = [[0,0],[0,1],[1,0],[0,-1],[-1,0],[1,1],[-1,-1]];
+  pattern.forEach(([dy,dx]) => {
+    const y=(cy+dy+GSIZE)%GSIZE, x=(cx+dx+GSIZE)%GSIZE;
+    if (g[y][x].s===VOID) g[y][x]={s:SPLIT,lv:0,age:0};
+  });
+}
+
+function hood(g, x, y) {
+  let scarN=0, anyN=0, maxLv=0;
+  for(let dy=-1;dy<=1;dy++) for(let dx=-1;dx<=1;dx++){
+    if(!dx&&!dy) continue;
+    const ny=(y+dy+GSIZE)%GSIZE, nx=(x+dx+GSIZE)%GSIZE;
+    const c=g[ny][nx];
+    if(c.s!==VOID){anyN++;maxLv=Math.max(maxLv,c.lv);if(c.s===SCAR)scarN++;}
+  }
+  return {scarN,anyN,maxLv};
+}
+
+function initGrid() {
+  grid = blankGrid();
+  visualScarsThisGen = 0;
+  plantSeed(grid, Math.floor(GSIZE/2), Math.floor(GSIZE/2));
+}
+
+function stepGrid() {
+  const next = blankGrid();
+  let ns=0;
+
+  for(let y=0;y<GSIZE;y++) for(let x=0;x<GSIZE;x++){
+    const {s,lv,age} = grid[y][x];
+    const {scarN,anyN,maxLv} = hood(grid,x,y);
+    let ss=VOID,sl=lv,sa=age+1;
+
+    if (s !== VOID && anyN >= 7 && Math.random() < 0.03) {
+      ss = VOID; sl = 0; sa = 0;
+    } else {
+      switch(s){
+        case VOID: if(anyN>=2){ss=SPLIT;sl=maxLv;sa=0;} break;
+        case SPLIT: ss=TEN; sl=lv; break;
+        case TEN: ss=MERGE; sl=lv; break;
+        case MERGE: ss=SCAR; sl=lv; ns++; break;
+        case SCAR: {
+          if (age >= 12 && Math.random() < 0.08) {
+            const dirs=[[-1,0],[1,0],[0,-1],[0,1],[-1,-1],[1,1],[-1,1],[1,-1]];
+            for(let i=dirs.length-1;i>0;i--){
+              const j=Math.floor(Math.random()*(i+1));
+              [dirs[i],dirs[j]]=[dirs[j],dirs[i]];
+            }
+            for(const [dy,dx] of dirs){
+              const ny=(y+dy+GSIZE)%GSIZE,nx=(x+dx+GSIZE)%GSIZE;
+              if(grid[ny][nx].s===VOID && next[ny][nx].s===VOID){
+                next[ny][nx]={s:SPLIT,lv:Math.min(lv+1,12),age:0};
+                break;
+              }
+            }
+          }
+          ss=DECAY; sl=lv; break;
+        }
+        case DECAY:
+          if(Math.random()<PHI_I){ss=VOID;sl=0;sa=0;}
+          else{ss=SPLIT;sl=lv;}
+          break;
+      }
+    }
+    if(next[y][x].s===VOID || s!==VOID) next[y][x]={s:ss,lv:sl,age:sa};
+  }
+  grid=next;
+  visualScarsThisGen+=ns;
+}
+
+// ══════════════════════════════
+//  DRAW VISUAL GRID (HD SMOOTH)
+// ══════════════════════════════
+
+function drawGrid() {
+  const W = gCanvas.clientWidth;
+  const H = gCanvas.clientHeight;
+  gCtx.fillStyle = '#03080a';
+  gCtx.fillRect(0, 0, W, H);
+
+  const cw = W / GSIZE;
+  const ch = H / GSIZE;
+  const gap = 0.5; // Tiny gap for visual separation
+
+  for(let y=0; y<GSIZE; y++) {
+    for(let x=0; x<GSIZE; x++) {
+      const {s, lv} = grid[y][x];
+      if(s === VOID) continue;
+
+      const alpha = Math.min(0.35 + lv * 0.09, 0.98);
+      
+      // Main cell with slight rounding
+      gCtx.globalAlpha = alpha;
+      gCtx.fillStyle = GCOL[s];
+      
+      const px = x * cw + gap;
+      const py = y * ch + gap;
+      const pw = cw - gap * 2;
+      const ph = ch - gap * 2;
+      
+      // Slightly rounded corners for smoothness
+      const radius = Math.min(pw, ph) * 0.15;
+      gCtx.beginPath();
+      gCtx.roundRect(px, py, pw, ph, radius);
+      gCtx.fill();
+
+      // Scar inner glow with smooth gradient
+      if(s === SCAR) {
+        const gradient = gCtx.createRadialGradient(
+          px + pw/2, py + ph/2, 0,
+          px + pw/2, py + ph/2, pw * 0.4
+        );
+        gradient.addColorStop(0, 'rgba(168, 218, 220, 0.6)');
+        gradient.addColorStop(1, 'rgba(168, 218, 220, 0)');
+        
+        gCtx.globalAlpha = alpha * 0.5;
+        gCtx.fillStyle = gradient;
+        gCtx.beginPath();
+        gCtx.arc(px + pw/2, py + ph/2, pw * 0.35, 0, Math.PI * 2);
+        gCtx.fill();
+      }
+    }
+  }
+  gCtx.globalAlpha = 1;
+  
+  // NOTE: Do NOT update scar display here - that's handled by updateStats()
+  // which uses the real b(k) from the math counter, not visual grid data
+}
+
+// ══════════════════════════════
+//  DRAW RATIO CHART (SMOOTH)
+// ══════════════════════════════
+
+function drawChart() {
+  const W = rCanvas.clientWidth;
+  const H = rCanvas.clientHeight;
+  rCtx.clearRect(0, 0, W, H);
+
+  if(ratioHistory.length < 2) {
+    rCtx.fillStyle='#1a3040';
+    rCtx.font=`11px 'Space Mono'`;
+    rCtx.textAlign='center';
+    rCtx.fillText('accumulating generations…', W/2, H/2);
+    return;
+  }
+
+  const PAD = 8;
+  const YMIN = 1.0, YMAX = 2.2;
+  const chartW = W - PAD * 2;
+  const chartH = H - PAD * 2;
+
+  function fy(v){ return PAD + chartH * (1 - (v-YMIN)/(YMAX-YMIN)); }
+  function fx(i){ return PAD + (i / (ratioHistory.length-1)) * chartW; }
+
+  // φ target line
+  const phiY = fy(PHI);
+  rCtx.strokeStyle='rgba(255,215,0,0.35)';
+  rCtx.lineWidth=2;
+  rCtx.setLineDash([5,5]);
+  rCtx.beginPath();
+  rCtx.moveTo(PAD, phiY);
+  rCtx.lineTo(W-PAD, phiY);
+  rCtx.stroke();
+  rCtx.setLineDash([]);
+
+  rCtx.fillStyle='rgba(255,215,0,0.7)';
+  rCtx.font=`9px 'Space Mono'`;
+  rCtx.textAlign='left';
+  rCtx.fillText('φ = 1.618', PAD + 4, phiY - 5);
+
+  // 1.0 reference
+  rCtx.strokeStyle='rgba(58,90,98,0.3)';
+  rCtx.lineWidth=1;
+  rCtx.beginPath();
+  rCtx.moveTo(PAD, fy(1.0));
+  rCtx.lineTo(W-PAD, fy(1.0));
+  rCtx.stroke();
+
+  // Smooth curve with gradient
+  const gradient = rCtx.createLinearGradient(0, 0, W, 0);
+  gradient.addColorStop(0, 'rgba(168,218,220,0.4)');
+  gradient.addColorStop(1, 'rgba(168,218,220,0.8)');
+
+  rCtx.beginPath();
+  ratioHistory.forEach((r,i)=>{
+    const px=fx(i), py=fy(Math.max(YMIN,Math.min(YMAX,r)));
+    i===0 ? rCtx.moveTo(px,py) : rCtx.lineTo(px,py);
+  });
+  rCtx.strokeStyle=gradient;
+  rCtx.lineWidth=2.5;
+  rCtx.lineCap='round';
+  rCtx.lineJoin='round';
+  rCtx.stroke();
+
+  // Fill under curve
+  rCtx.lineTo(fx(ratioHistory.length-1), H);
+  rCtx.lineTo(PAD, H);
+  rCtx.closePath();
+  rCtx.fillStyle='rgba(168,218,220,0.08)';
+  rCtx.fill();
+
+  // Current point with glow
+  const last = ratioHistory[ratioHistory.length-1];
+  const lastX = fx(ratioHistory.length-1);
+  const lastY = fy(Math.max(YMIN,Math.min(YMAX,last)));
+  const err = Math.abs(last-PHI);
+  
+  const dotGradient = rCtx.createRadialGradient(lastX, lastY, 0, lastX, lastY, 8);
+  dotGradient.addColorStop(0, err < 0.05 ? '#ffd700' : '#a8dadc');
+  dotGradient.addColorStop(1, 'rgba(0,0,0,0)');
+  
+  rCtx.fillStyle = dotGradient;
+  rCtx.beginPath();
+  rCtx.arc(lastX, lastY, 8, 0, Math.PI*2);
+  rCtx.fill();
+  
+  rCtx.fillStyle = err < 0.05 ? '#ffd700' : '#a8dadc';
+  rCtx.beginPath();
+  rCtx.arc(lastX, lastY, 4, 0, Math.PI*2);
+  rCtx.fill();
+}
+
+// ══════════════════════════════
+//  UPDATE STATS
+// ══════════════════════════════
+
+function updateStats(ratio) {
+  document.getElementById('sv-gen').textContent = generation;
+  document.getElementById('sv-scars').textContent = genScars.length>0
+    ? genScars[genScars.length-1].toLocaleString() : '—';
+
+  let procs=0;
+  for(let y=0;y<GSIZE;y++) for(let x=0;x<GSIZE;x++)
+    if(grid[y][x].s!==VOID) procs++;
+  document.getElementById('sv-procs').textContent = procs;
+
+  if(ratio===null){
+    document.getElementById('sv-phi').textContent='…';
+    document.getElementById('phi-badge').textContent='…';
+    return;
+  }
+
+  const err = Math.abs(ratio-PHI);
+  const conv = err < 0.05;
+  const ratioStr = ratio.toFixed(4);
+
+  document.getElementById('sv-phi').textContent = ratioStr;
+  document.getElementById('sv-phi').className = 'stat-value'+(conv?' gold':'');
+  document.getElementById('phi-badge').textContent = conv
+    ? `✓ ${ratioStr} ≈ φ` : `${ratioStr}`;
+  document.getElementById('phi-badge').className = 'phi-badge'+(conv?' converged':'');
+
+  if(conv && !convergedOnce){
+    convergedOnce=true;
+    showToast('φ CONVERGENCE', `b(k+1)/b(k) = ${ratioStr} ≈ φ = 1.6180…`, true);
+  }
+}
+
+// ══════════════════════════════
+//  MAIN LOOP
+// ══════════════════════════════
+
+let lastTs=0, stepCount=0;
+
+function loop(ts){
+  const spd=SPEEDS[speedIdx];
+  if(running && ts-lastTs > 80/spd){
+    for(let i=0;i<spd;i++){
+      stepGrid();
+      stepCount++;
+      if(stepCount % 5 === 0){
+        generation++;
+        visualScarsThisGen=0;
+        const ratio = stepCounter();
+        updateStats(ratio);
+      }
+    }
+    drawGrid();
+    drawChart();
+    lastTs=ts;
+  } else if(!running){
+    drawGrid();
+    drawChart();
+  }
+  requestAnimationFrame(loop);
+}
+
+function fullReset(){
+  stepCount=0;
+  initCounter();
+  initGrid();
+  updateStats(null);
+}
+fullReset();
+requestAnimationFrame(loop);
+
+// ══════════════════════════════
+//  CONTROLS
+// ══════════════════════════════
+
+document.getElementById('btn-play').onclick=()=>{
+  running=!running;
+  const b=document.getElementById('btn-play');
+  b.textContent=running?'⏸ PAUSE':'▶ PLAY';
+  b.classList.toggle('on',running);
+};
+
+document.getElementById('btn-reset').onclick=()=>{
+  fullReset();
+  showToast('RESET','returning to undifferentiated unity');
+};
+
+document.getElementById('btn-seed').onclick=()=>{
+  const cx=4+Math.floor(Math.random()*(GSIZE-8));
+  const cy=4+Math.floor(Math.random()*(GSIZE-8));
+  plantSeed(grid,cx,cy);
+  showToast('NEW SEED',`distinction at (${cx},${cy})`);
+};
+
+document.getElementById('btn-speed').onclick=()=>{
+  speedIdx=(speedIdx+1)%SPEEDS.length;
+  document.getElementById('btn-speed').textContent=SPEEDS[speedIdx]+'× SPD';
+};
+
+function tapAt(cx,cy){
+  const r=gCanvas.getBoundingClientRect();
+  const gx=Math.floor(((cx-r.left)/r.width)*GSIZE);
+  const gy=Math.floor(((cy-r.top)/r.height)*GSIZE);
+  if(gx>=0&&gx<GSIZE&&gy>=0&&gy<GSIZE){
+    grid[gy][gx]={s:SPLIT,lv:0,age:0};
+    showToast('SPLIT',`distinction at (${gx},${gy})`);
+  }
+}
+
+gCanvas.addEventListener('click',e=>tapAt(e.clientX,e.clientY));
+gCanvas.addEventListener('touchstart',e=>{
+  e.preventDefault();
+  tapAt(e.touches[0].clientX,e.touches[0].clientY);
+},{passive:false});
+
+// ══════════════════════════════
+//  TOAST
+// ══════════════════════════════
+
+let toastTimer;
+function showToast(title,msg,isGold=false){
+  document.getElementById('tt').textContent=title;
+  document.getElementById('tm').textContent=msg;
+  const t=document.getElementById('toast');
+  t.className=isGold?'gold':'show';
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>t.className='',isGold?5000:2500);
+}
+</script>
+
+</body>
+</html>
