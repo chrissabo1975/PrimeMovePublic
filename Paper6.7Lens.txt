@@ -1,0 +1,419 @@
+Paper 6: The Prime Move Lens
+A User's Guide
+Chris Sabo  |  Independent Researcher  |  March 2026
+ 
+ABSTRACT
+This paper is the user's guide to the Prime Move framework — the practical introduction to the lens itself. Papers 1–5 established the axioms, mathematics, geometric unfolding, empirical validation, and the arrow of time. Papers 1–5 are in preparation and will be posted to this repository as they are completed. This paper asks a simpler question: how do you pick up this lens and use it? The central claim is that any system — a thought, a conversation, a tattoo, a civilization — can be mapped onto the same five-stage cycle: Split, Tension, Failed Merge, Scar, Decay. Once you see the cycle, you can diagnose where a system is, predict where it is going, and act accordingly. The paper builds from the most ordinary examples (a thought, a conversation, making eggs) to complex systems (society, consciousness), concluding with a demonstration of the lens applied to contemporary civilization. Whether this is a universal descriptive framework remains an open question 
+Keywords: Prime Move, lens, user guide, Split, Tension, Failed Merge, Scar, Decay, fractal complexity, social cycles, practical application
+1. Introduction: What This Paper Is (And Isn't)
+1.1  Why Another Paper?
+If you have read Papers 1–5, you know the theory.  (Papers 2-5 forthcoming. Currently available in preprint at https://github.com/chrissabo1975  ). You know the axioms. You know the math. You know the confirmations. You know time itself is scar accumulation.
+But knowing a theory and using a lens are different things.
+This paper is not another proof. It is a manual. It is for the person who wants to pick up the lens and look at something — a conversation, a career, a relationship, a society — and see what is there.
+You do not need mathematics. You do not need philosophy. You need only four axioms:
+ 
+Axiom	Statement
+Axiom 0	Nothing cannot persist. Something must emerge.
+Axiom 1	Before any structure, there is undifferentiated unity.
+Axiom 2	Distinction is necessary. Without it, nothing happens.
+Axiom 3	Distinction cannot be perfectly erased. It leaves residue.
+ 
+From these four axioms, a five-stage cycle follows necessarily. Everything else is elaboration.
+1.2  The Five Stages (Quick Reference)
+ 
+Stage	Symbol	What It Is
+Split	S	A distinction appears where there was none
+Tension	T	Imbalance, gradient, desire, pressure
+Failed Merge	FM	Attempted resolution that leaves residue
+Scar	Sc	The residue — persistent structure, memory, form
+Decay	D	Relaxation, release, enabling the next cycle
+ 
+That is it. Everything else in this paper is learning to see those five stages in the systems you encounter every day.
+1.3  How to Read This Paper
+The paper is structured as a graduation. We begin with the smallest, most personal systems — your thoughts, a conversation — then move to physical processes, then to technology and biology, then to civilization. Each example adds one layer of complexity. By the end, the reader should be able to apply the lens independently to any system they encounter.
+A note on scope: this paper does not claim the lens replaces domain expertise. It complements it. A doctor, an economist, and a parent will each see different things through the same lens. That is a feature, not a limitation.
+ 
+2. The Lens in Depth: The Five Stages
+
+Each stage section follows the same structure — definition, examples graduated from personal to physical, how to spot it, common mistakes. This parallelism is intentional. Readers will learn the rhythm. 
+ 
+2.1  Split: The Birth of Distinction
+A Split is any moment when something becomes distinct from its background. It is the first movement — the instant something separates from everything else.
+Examples, graduated:
+• A thought separates from the stream of consciousness
+• You wake up — awareness separates from sleep
+• A conversation begins — one person speaks into silence
+• A cell divides from its parent
+• A civilization distinguishes itself from nature
+ 
+How to spot a Split:
+• What just became different?
+• What boundary appeared that was not there before?
+• What was unified that is now two?
+ 
+Common mistakes:
+• Thinking a Split requires effort — it does not. It just happens.
+• Missing subtle Splits — the lens sharpens with practice.
+ 
+2.2  Tension: The Imbalance That Drives
+Tension is what happens after a Split. The two sides are now in relation. That relation creates pressure — a gradient, a pull, a desire to resolve.
+Tension is not negative. It is the engine. Without it, nothing moves.
+Examples:
+• You have a thought — the gap between what you know and what you don't creates tension
+• A conversation begins — speaker and listener are in tension
+• Ink enters skin — the body wants to return to its prior state
+• A cell divides — the two daughters now have a relationship and a difference
+• A civilization emerges — humans and nature are now separate and in tension
+ 
+How to spot Tension:
+• What is pulling against what?
+• What is the gradient — energy, desire, pressure, difference?
+• What wants to happen but has not yet?
+ 
+Common mistakes:
+• Treating tension as a problem to eliminate — it cannot be eliminated, only resolved temporarily
+• Confusing the source of tension with the tension itself
+ 
+2.3  Failed Merge: The Incomplete Resolution
+The system tries to resolve tension. It attempts to merge the distinguished elements back into unity. But perfect merge is impossible. The axioms guarantee it: distinction leaves residue.
+This is not failure in the pejorative sense. It is the most important moment in the cycle. The residue left by Failed Merge is what builds all structure.
+Examples:
+• A conversation reaches understanding — but never perfect understanding. Something always remains unsaid.
+• Ink enters skin in a tattoo — the body reacts but cannot restore the exact prior state
+• A scalpel cuts — tissue separates in a way it cannot fully undo
+• Two people fall in love and attempt to merge — but remain two people
+• A civilization attempts to reconcile with nature — and always leaves a trace
+ 
+How to spot a Failed Merge:
+• What was the attempt to resolve?
+• What did not resolve?
+• What residue was left?
+ 
+Common mistakes:
+• Thinking failure means the system is broken — failure is the engine of structure
+• Trying to achieve perfect resolution — the framework predicts this is impossible
+ 
+2.4  Scar: The Residue That Persists
+The Failed Merge leaves a scar. This is the structure that persists. The memory. The institution. The habit. The identity. The literal mark on skin.
+Scars are not damage. They are information encoded in form. They are what the system remembers.
+Examples:
+• A thought becomes a memory
+• A conversation becomes a shared understanding between two people
+• Tattoo ink settles permanently in the dermis — a literal and symbolic scar
+• Surgical incision heals, leaving a scar that maps the history of the procedure
+• Two cells become a tissue, then an organ, then a body
+• A civilization becomes a city, a law, a culture — accumulated scar
+ 
+How to spot a Scar:
+• What remains after the tension subsides?
+• What structure is now stable?
+• What memory persists?
+ 
+Common mistakes:
+• Treating all scars as damage — scars enable the next cycle
+• Failing to distinguish useful scars from harmful ones — the lens helps you see the difference
+ 
+2.5  Decay: The Release That Enables Renewal
+Eventually, the scar relaxes. The system lets go. Not destruction — release. This is not ending. It is completion. And completion enables the next Split.
+Decay is the most resisted stage, and the most necessary.
+Examples:
+• A memory fades, making room for new thought
+• A tattoo fades over years — the ink disperses, the scar softens
+• A surgical scar flattens and lightens over time
+• A cell dies, making room for new cells
+• A conversation ends, enabling the next
+• An institution decays, making room for new forms
+• You sleep — the day decays, enabling tomorrow
+ 
+How to spot Decay:
+• What is fading?
+• What is being released?
+• What is ending to make room for something new?
+ 
+Common mistakes:
+• Fighting decay — it is necessary
+• Treating decay as failure — it is completion
+ 
+2.6  The Cycle Never Ends — And Always Builds
+After Decay comes a new Split. The cycle repeats. This is not circular — it is recursive. Each cycle builds on the scars of the previous. The structure accumulates. The complexity grows.
+This is why the lens works at every scale. The same five stages, running over and over, produce everything from a single thought to a civilization. The stages do not change. Only the scale and the accumulated scar changes.
+ 
+3. The Lens in Practice: Graduated Examples
+This section builds from the most immediate human experience outward. Each example adds one layer. By the end of this section, the reader should be able to apply the five stages to any system they encounter.
+ 
+3.1  Example 1 — Your Own Thoughts (The Most Personal Scale)
+Let us start with the most immediate system you have: your own thoughts. Right now, reading this.
+You are thinking about something. Then this sentence pulled your attention. That is a Split.
+You are now gathering what I am saying, comparing it to what you already know, trying to understand. That is Tension — the productive gap between what you know and what you are hearing.
+You cannot know everything I mean. I have not said everything. Perfect understanding is impossible. That is the Failed Merge.
+What forms is a mutual understanding — partial, imperfect, but real. That is the Scar.
+When you close this paper and think about something else, this specific moment will fade. That is Decay.
+ 
+The key insight: every thought you have ever had — and will ever have — follows this structure.
+That is not a small claim. That covers approximately 99% of everything you consciously experience.
+ 
+3.2  Example 2 — This Conversation (The Relational Scale)
+Now expand one step outward. Not just your thought, but a conversation — any conversation.
+Every conversation produces a mutual understanding. That is all it does. That mutual understanding is a scar — a shared structure that persists after the conversation ends.
+This applies to every conversation you will ever have:
+• Talking to a colleague
+• Talking to a spouse
+• Talking to a dog
+• Talking to yourself
+• Talking to no one — to the universe, in a journal, in silence
+ 
+All of them create a mutual understanding. The scale changes. The process does not.
+ 
+3.3  Example 3 — The Tattoo (The Physical Scale)
+Now move from the mental to the physical — to one of the most ancient human practices of deliberate scar-making.
+ 
+Stage	What Happens
+Split	The needle enters the skin. A boundary is crossed. The skin is no longer intact.
+Tension	Ink enters the dermis. The body's immune system responds — white blood cells rush to the site. The body wants to return to its prior state.
+Failed Merge	The body cannot fully resolve the intrusion. The ink is too large for macrophages to remove entirely. Some ink remains permanently trapped.
+Scar	The tattoo forms — a permanent image encoded in the dermis. A literal scar. A mark that maps exactly what happened.
+Decay	Over years, tattoos fade. Ink disperses slowly. The scar softens. The image changes.
+ 
+The tattoo is both a literal scar and a symbolic one. This double meaning is not accidental — it is the lens revealing its own depth.
+ 
+3.4  Example 4 — Surgery (The Physical Scale, Unintentional Scar)
+The tattoo is a chosen scar. Surgery is a necessary one. The process is identical.
+ 
+Stage	What Happens
+Split	The scalpel cuts the skin. A distinction is made — inside and outside, opened and closed.
+Tension	Skin pulls, body reacts, tissues separate, inflammation begins.
+Failed Merge	The skin cannot return to its exact original state. The structural integrity has changed.
+Scar	The surgical scar forms — a permanent record of the intervention.
+Decay	Over months and years, the scar fades, flattens, and lightens.
+ 
+Different intention. Different job. Same structure. The cycle does not care about intention — it runs regardless.
+ 
+3.5  Example 5 — Your Phone (Technology at the Attention Scale)
+Now move to a system that mediates most of modern experience: the smartphone.
+ 
+Stage	What Happens
+Split	Your attention shifts to the screen. Whatever you were doing is interrupted. A new distinction appears.
+Tension	You gather information — scroll, read, watch. The gap between what the screen shows and what you want to find creates tension.
+Failed Merge	You are never fully satisfied. The screen is finite. Information is incomplete. You cannot consume everything.
+Scar	A short-term memory forms. You carry what you saw.
+Decay	You scroll to the next item. The previous moment fades. The next Split begins.
+ 
+The phone accelerates the cycle to an extreme. Splits happen every few seconds. Scars barely form before Decay begins. This is not incidental — it is structural. The device is engineered to maximize Splits and minimize Scar formation. That has consequences the lens makes visible.
+ 
+3.6  Example 6 — Making Eggs (The Code Stacks)
+This is the most important example in the paper for understanding how the framework actually works at the level of action. Not one cycle — but cycles nested inside cycles, stacking to produce everything.
+Picture yourself in front of the refrigerator. Walk through what follows:
+ 
+• You open the fridge door. Split. A full run of the code.
+• You reach in and grab the egg container. Split. Another run.
+• You set it on the counter. Split. Another run.
+• You open the container. Split.
+• You pick up an egg. Split.
+• You crack the egg. Split — and a particularly clean one. The shell and the contents distinguish. The egg cannot uncrack.
+• You mix the egg. Split. The yolk and white merge imperfectly — a Failed Merge that produces scrambled eggs.
+• You pour it into the pan. Split.
+• The eggs cook. Split and code — heat denatures protein permanently.
+• You plate the eggs. Split.
+• You chew. Split — the food is broken down irreversibly.
+• You digest. Split and code — nutrients are absorbed, waste is separated.
+• You excrete. Split — a final, literal release.
+ 
+Each of those is a full run of the five-stage cycle. Each produces a scar. Each enables the next Split. And all of them are nested inside one larger cycle: the decision to make breakfast, which is itself nested inside the cycle of a day, which is nested inside a life.
+ 
+This is the key insight: every action you take is a Split initiating a run of the code. All you do is cause change. All change follows this structure. The code stacks.
+ 
+3.7  Example 7 — Your Existence (The Biological Origin Scale)
+Now move to the largest personal scale: how you came to exist.
+ 
+Stage	What Happened
+Split	Two people became aware of each other. A distinction appeared — self and other, before and after meeting.
+Tension	Attraction built. Connection developed. The pull between two distinct people.
+Failed Merge	The attempt to unite — to become one. Biology guarantees it is always a Failed Merge. Two remain two.
+Scar	You. A new distinct entity — the persistent structure that emerged from the failed attempt at unity.
+Decay	The life cycle you are currently in. Every organism is in Decay from the moment of Split.
+ 
+You are a scar. This is not a metaphor. It is a structural description of your origin. The same description applies to every living thing.
+ 
+4. How to Use the Lens
+4.1  The Five Questions
+Whenever you encounter a system — any system — ask these five questions in order:
+ 
+Question	What You Are Looking For
+1. Split	What distinction was just made? What appeared? What boundary formed?
+2. Tension	What imbalance does this create? What is pulling? What wants to happen?
+3. Failed Merge	What attempt at resolution failed? What residue remains?
+4. Scar	What structure has stabilized? What persists? What is remembered?
+5. Decay	What is releasing? What is ending to make room for the next cycle?
+ 
+Apply them in order. The system will reveal itself. Start with what you can see, then work inward.
+ 
+4.2  Diagnosing Stuck Systems
+A system is stuck when one stage dominates and the others are suppressed. This is one of the most practically useful applications of the lens.
+ 
+Stuck Stage	What It Looks Like	How to Unstick
+Endless Split	Constant novelty, no follow-through, ADD-like cycling	Force tension — ask: what does this distinction demand?
+Unresolved Tension	Chronic conflict, energy without resolution	Allow Failed Merge — let the attempt happen, let residue form
+Failed Merge Loop	Repetition without progress, same argument forever	Recognize the Scar — name what persists, then let Decay happen
+Scar Overload	Rigidity, calcification, inability to change	Prune — intentionally release what no longer serves
+No Decay	Exhaustion, burnout, no space for new cycles	Allow rest — the system needs release before the next Split
+ 
+4.3  Predicting Direction
+The cycle has direction. Knowing where a system is tells you where it is likely to go. This is not determinism — it is probability. Systems can get stuck. But the default flow is predictable.
+ 
+Current Stage	Likely Next Stage	What to Watch For
+Split	Tension	What gradient is forming?
+Tension	Failed Merge	What attempt at resolution is building?
+Failed Merge	Scar	What is stabilizing?
+Scar	Decay	What is becoming rigid?
+Decay	New Split	What new distinction is emerging?
+ 
+4.4  The Ladder: Tiers of Accumulated Complexity
+Some systems accumulate so many cycles that they climb a ladder of complexity. Each tier represents a qualitatively different level of scar accumulation:
+ 
+Tier	Dimension	What It Is	Examples
+1: Linear	1D	Simple sequences, no branching	Single thoughts, simple reflexes
+2: Hierarchical	2D	Nesting, trees, parent-child structures	Simple organisms, basic institutions
+3: Fractal	Fractional	Self-similar scaling — multiple pathways	Most biological systems, ecosystems
+4: Wave	3D Oscillation	Feedback, cycles across scales	Brains, markets, climate systems
+5: Dendritic	3D Networks	Connected structures with redundancy	Neural networks, the internet
+6: Perpetual	4D Time-Binding	Self-sustaining recursive complexity	Hypothetical — humanity's potential
+ 
+Most systems operate in Tiers 1–3. Tiers 4–6 are rare. Humanity is currently in Tier 3, branching toward 4.
+ 
+4.5  The Pathways: How Tier 3 Complexity Branches
+At Tier 3, fractal complexity, systems can take one of three generative pathways — or run multiple simultaneously:
+ 
+Pathway	Mechanism	Signature	Examples Confirmed
+Spiral	Asymmetric tension + directional memory	Phi-family ratios, golden angle, logarithmic spirals	Nautilus shell, spiral galaxy, sunflower
+Optimization	Symmetric constraints + efficiency pressure	Murray's law, 120° angles, geometric ratios	Honeycomb, circulatory system, slime mold
+Aggregation	Stochastic diffusion + local rules	Fractal dimension D=1.2–1.7, power laws	Coastlines, lightning, river deltas
+Mixed	Multiple pathways simultaneously	D=1.8–2.0, complex signatures	Coral reef, hurricanes, consciousness
+ 
+A key theoretical prediction: fractal dimension values cluster by pathway type. Pure Aggregation converges toward D=1.2–1.7. Mixed pathways converge toward D=1.8–2.0. This dimensional gap is not arbitrary — it is a predicted attractor from the framework, confirmed empirically across fifteen systems.
+ 
+5. Demonstration: Contemporary Society Through the Lens
+5.1  Where Are We? The Diagnostic
+Applying the five questions to humanity in 2026:
+ 
+Stage	Current Diagnosis
+Split	The old order is fracturing. Nation-states, shared institutions, consensus narratives — all in active splitting. What was unified is becoming multiple.
+Tension	Enormous and multi-directional: climate, inequality, AI disruption, culture wars, geopolitical realignment. Everything pulling against everything simultaneously.
+Failed Merge	Attempts to resolve are failing. Legacy solutions do not work. New solutions are not yet stable. The failure is producing residue faster than it can be processed.
+Scar	What persists: fragmentation, eroded trust, competing realities, institutional debt. These are the scars of accumulated Failed Merges over decades.
+Decay	The old order is releasing. Institutions built for the 20th century are in active decay. This is necessary — but what forms next is not yet determined.
+ 
+Assessment: humanity is in late Tension, entering Failed Merge. The next decade will determine what scar forms — and whether we can decay gracefully into something new or rigidly resist until collapse forces it.
+ 
+5.2  Which Pathway Are We On?
+We are running all three pathways simultaneously. This is unsustainable at scale — systems eventually consolidate. The question is which pathway dominates, or whether a genuine Mixed integration is possible.
+ 
+Pathway	If This Dominates	Risk	What It Requires
+Spiral	Cultural recursion — history cycling, ideology returning, identity politics deepening	Stagnation, repetition, no net progress	Breaking the recursive loop — introducing genuine novelty
+Optimization	Technology and markets above all — maximum efficiency, minimum friction	Meaninglessness, erosion of social fabric, optimized collapse	Recognizing what optimization cannot measure
+Aggregation	Bottom-up chaos — local emergence, fragmentation, loss of coherent structure	Inability to coordinate at the scale problems require	Mechanisms for coherence without centralization
+Mixed (Integrated)	Balanced complexity — all three pathways contributing without any dominating	Rare, requires conscious coordination across scales	Unprecedented institutional design
+ 
+The lens does not prescribe which institutions should decay or what new structures should form — those are values questions the framework does not resolve. It does make visible that not choosing is itself a choice, and that the default trajectory without deliberate intervention is chaotic Aggregation.
+ 
+5.3  What the Lens Suggests (Not Prescribes)
+ 
+Stage	Structural Suggestion
+Tension	Do not suppress it — channel it. Create structures that convert tension into productive Failed Merges rather than accumulating it as trauma.
+Failed Merge	Allow failure. Do not punish it structurally. Let residue accumulate as learning, not shame.
+Scar	Prune deliberately. Release what no longer serves. Distinguish between scars that encode useful history and scars that encode harm.
+Decay	Do not fight necessary endings. Make room for new cycles. Institutions that cannot decay will eventually collapse.
+New Split	Be ready. The next cycle begins when we release the last. The Split is already forming.
+ 
+6. Limits of the Lens
+6.1  What the Lens Does Not Do
+• It does not predict the future with certainty — only direction and probability
+• It does not tell you what is good — only what is structural
+• It does not replace expertise — it provides a structural frame that domain knowledge fills
+• It does not guarantee outcomes — systems can get stuck at any stage
+• It does not resolve values questions — which scars to keep, which to release, what to build
+ 
+6.2  When the Lens Fails
+The lens works best on systems with enough history to have a discernible cycle. It is less useful for:
+• Systems too new to have completed a cycle — early Splits are fuzzy
+• Systems in extreme late Decay — structure has dissolved to the point where stages blur
+• Systems you are too close to see clearly — the lens requires some distance
+ 
+6.3  Open Questions
+These are not failures. They are the next questions:
+• Can the lens be quantified beyond current fractal metrics? Can we derive the fine structure constant from the framework?
+• Can we predict phase transitions — the moment a system moves from one stage to the next — more precisely?
+• Can we design institutions that intentionally cycle — that build in deliberate Decay to prevent calcification?
+• Is Tier 6 (Perpetual) achievable for a civilization? What would that even look like?
+• Where exactly does consciousness sit in the framework — and does the lens explain subjective experience, or only its structural correlates?
+ 
+7. Conclusion: The Lens Is Yours
+7.1  What You Now Have
+You have a lens that works on:
+• Your own thoughts — the most immediate scale
+• Your conversations — the relational scale
+• Your actions — every egg you crack, every decision you make
+• Your body — the biological scale
+• Your society — the civilizational scale
+• Time itself — the cosmological scale (Paper 5)
+ 
+You have a tool that diagnoses, predicts, and provides structural guidance. You have a way of seeing that does not run out.
+ 
+7.2  What You Do With It
+Use it. Share it. Test it. Break it. Refine it. Apply it to a system it should not fit and see what happens.
+The lens is not fragile. If it fails on a system, that failure is information. Either the framework needs refinement, or the system is in a stage that makes structure temporarily invisible. Both are worth knowing.
+ 
+7.3  The Invitation
+Apply the lens to something today. A conversation. A problem. A memory. A relationship that is stuck. A decision you have been avoiding.
+See what you see.
+Then apply it again tomorrow. And the next day.
+ 
+It does not run out. It only deepens.
+ 
+— C.S.
+ 
+Appendix A: Quick Reference Card
+The Five Questions
+ 
+Stage	The Question to Ask
+Split	What distinction appeared? What boundary formed?
+Tension	What imbalance does this create? What is pulling?
+Failed Merge	What attempt at resolution failed? What residue remains?
+Scar	What structure persists? What is remembered?
+Decay	What is releasing? What is ending to make room?
+ 
+Stuck System Diagnostic
+ 
+If the system looks like...	It is stuck in...	Try...
+Constant novelty, no follow-through	Split	Forcing tension — demand consequence
+Chronic conflict, no resolution	Tension	Allowing the attempt — let failure happen
+Same loop repeating	Failed Merge	Naming the scar — then releasing it
+Rigidity, inability to adapt	Scar Overload	Deliberate pruning
+Exhaustion, no space	No Decay	Allowing rest and release
+ 
+Appendix B: Glossary
+ 
+Term	Definition
+Split	The moment distinction appears — a boundary forms where there was none
+Tension	The imbalance or gradient that drives the cycle after a Split
+Failed Merge	The attempt at resolution that cannot fully succeed — guaranteed by Axiom 3
+Scar	The persistent structure left by a Failed Merge — memory, form, institution
+Decay	The release of a Scar that enables the next cycle
+Lens	The Prime Move framework used as a practical observational tool
+Cycle	One complete pass through all five stages
+Ladder	The tiers of accumulated complexity (1–6) produced by iterated cycles
+Pathway	The generative route through Tier 3: Spiral, Optimization, Aggregation, or Mixed
+Attractor	A stable fractal dimension value that a pathway converges toward across systems
+ 
+References
+Sabo, C. (2026a). The Prime Move Operator: Axioms and Conceptual Foundation (Paper 1). [This series]  D.O.I. https://doi.org/10.5281/zenodo.18998546
+Sabo, C. (2026b). The Prime Move Operator: Mathematical Formalization and Proofs (Paper 2). [This series] forthcoming 
+Sabo, C. (2026c). The Prime Move Hierarchy: Dimensional Unfolding and Tier Emergence (Paper 3). [This series] forthcoming 
+Sabo, C. (2026d). Multiple Generative Pathways to Fractal Complexity: Empirical Validation Across Fifteen Systems (Paper 4). [This series] forthcoming 
+Sabo, C. (2026e). Time as Scar: A Foundational Account of Irreversibility, Biological Rhythms, and Subjective Time Variation (Paper 5). [This series] forthcoming 
+Preprints of paper 2,3,4,5 are available at https://github.com/chrissabo1975 
+ 
+Acknowledgments: 
+
+The author conducted this research independently outside formal academic institutions. AI assistants were used throughout development for literature search, mathematical formalization feedback, and manuscript refinement. All core theoretical contributions, conceptual frameworks, and empirical verification decisions originate with the author. AI tools functioned in an advisory and research assistance capacity throughout. 
+
+Version 1.0  |  March 2026  
