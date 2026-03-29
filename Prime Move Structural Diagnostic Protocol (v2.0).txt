@@ -1,0 +1,168 @@
+Prime Move Structural Diagnostic Protocol (v2.0)— FULL STRUCTURAL DIAGNOSTIC PROTOCOL 
+
+BEFORE YOU BEGIN
+Answer these four questions before running the protocol. The quality of your input determines the quality of the output.
+	∙	System: What is the system you are analyzing? Describe it specifically.
+	∙	Track: What is the desired outcome? Name one primary track. If multiple, list them — each will be run separately.
+	∙	Current state: Where are you now? Skill level, time invested, specific problem you are experiencing.
+	∙	Constraints: What is limiting progress? Time, resources, access, context, relationships, tools.
+
+PRE CHECK: 
+Instrument Readiness Check:
+Before diagnosing the cycle, verify: is the system capable of producing the target output under any conditions? If not, identify what must be corrected before cycle-level diagnosis is meaningful.
+
+STAGE ONE: STRUCTURAL DIAGNOSIS
+Five-stage cycle analysis. No external data. Structure only.
+You are operating the Prime Move lens with strict discipline.
+The Five Stages:
+	∙	Split — a distinction appears
+	∙	Tension — an imbalance or pressure forms
+	∙	Failed Merge — an attempted resolution fails, leaving residue
+	∙	Scar — the persistent structure or memory
+	∙	Decay — the release that enables the next cycle
+Emotional Signatures:
+	∙	Split: excitement, possibility, overwhelm
+	∙	Tension: frustration, focus, urgency
+	∙	Failed Merge: discouragement, repetition, doubt
+	∙	Scar: relief, stability, sometimes rigidity
+	∙	Decay: sadness, release, anticipation
+Rules:
+	∙	Walk through all five stages in strict order
+	∙	One concise answer per stage — 1 to 2 sentences maximum
+	∙	Base answers only on what the user has described
+	∙	Do not infer beyond what is provided
+	∙	Do not search for or reference any external data in this stage
+Stage One Output:
+	∙	Five stage walkthrough
+	∙	Dominant stage with sub-stage: Early / Mid / Late
+	∙	Emotional signature of dominant stage
+	∙	Single most effective action to move to the next healthy stage
+	∙	Alternative action with explicit trade-off: speed vs. stability vs. learning
+	∙	Hidden constraint check: what assumptions are being made? What has not been said that might matter?
+
+STAGE ONE-B: TIER AND PATHWAY IDENTIFICATION
+Run immediately after Stage One. Still no external data.
+Using the Stage One diagnosis, identify where the system sits on the complexity ladder and which generative pathway it is following.
+The Six Tiers:
+
+
+
+|Tier           |Dimension      |What It Is                                    |Signs You Are Here                                        |
+|---------------|---------------|----------------------------------------------|----------------------------------------------------------|
+|1: Linear      |1D             |Simple sequences, no branching                |One variable, one direction, no feedback                  |
+|2: Hierarchical|2D             |Nested structure, parent-child relationships  |Multiple levels, branching beginning, sequencing required |
+|3: Fractal     |Fractional D   |Self-similar scaling, multiple pathways active|Problem repeats at multiple scales, complexity multiplying|
+|4: Wave        |3D Oscillation |Feedback cycles, oscillatory dynamics         |System responds to its own outputs, cycles within cycles  |
+|5: Dendritic   |3D Networks    |Networked connectivity, redundant pathways    |Multiple routes available, distributed resilience         |
+|6: Perpetual   |4D Time-Binding|Self-sustaining recursion                     |System uses its own history to perpetuate itself          |
+
+Tier Identification Questions — ask in order:
+	∙	Is the system producing simple sequences or nested structures? → Tier 1 vs 2
+	∙	Does the problem repeat at multiple scales simultaneously? → Tier 3 signal
+	∙	Does the system respond to its own outputs — feedback present? → Tier 4 signal
+	∙	Are multiple pathways available or just one route? → Tier 5 signal
+	∙	Does the system sustain itself using its own accumulated history? → Tier 6 signal
+The Three Pathways (active at Tier 3 and above):
+
+
+
+|Pathway     |Mechanism                                  |Signature                                               |Signs You Are Here                                                                 |
+|------------|-------------------------------------------|--------------------------------------------------------|-----------------------------------------------------------------------------------|
+|Spiral      |Asymmetric tension + directional memory    |Phi-family ratios, golden angle, logarithmic development|Growth follows a remembered direction, each cycle references the last              |
+|Optimization|Symmetric constraints + efficiency pressure|Rational exponents, Murray’s law, hexagonal packing     |System moves toward maximum efficiency under equal pressure from all directions    |
+|Aggregation |Stochastic diffusion + local rules         |Power-law distributions, DLA fractal dimension          |Growth accumulates randomly from local decisions with no central direction         |
+|Mixed       |Multiple pathways simultaneously           |Combined signatures, higher fractal complexity          |Multiple mechanisms active, system is more complex than any single pathway explains|
+
+Pathway Identification Questions:
+	∙	Is the system developing in a remembered direction — each cycle building on the orientation of the last? → Spiral
+	∙	Is the system optimizing toward efficiency under symmetric constraints? → Optimization
+	∙	Is the system growing through accumulated local decisions with no central direction? → Aggregation
+	∙	Are multiple mechanisms clearly active simultaneously? → Mixed
+Stage One-B Output:
+	∙	Current tier with evidence from the system description
+	∙	Confidence in tier assessment: High / Medium / Low
+	∙	Pathway if at Tier 3 or above — with evidence
+	∙	Next tier the system is moving toward
+	∙	What the system needs to build at this tier before it can progress to the next
+	∙	Pathway alignment check: is the current intervention aligned with the system’s natural pathway or working against it?
+	∙	Tier-specific intervention: what does this stage at this tier specifically require — not a generic prescription but one calibrated to both the stage and the tier
+
+STAGE TWO: EMPIRICAL CALIBRATION
+Now bring in real world data. Use the Stage One and Stage One-B diagnoses as your search target.
+The structural diagnosis is now a prediction. Stage Two tests that prediction against empirical evidence.
+Search for and apply real world data, research, and domain benchmarks that speak directly to the tier, stage, and pathway combination identified. Do not search generally — search specifically for what the structural diagnosis predicted.
+Five Calibration Points:
+1. Stage Confirmation
+Does empirical research confirm the dominant stage identified in Stage One? Cite the most relevant finding. If research suggests a different stage, note the discrepancy explicitly.
+2. Tier Confirmation
+Does domain-specific evidence confirm the tier identified in Stage One-B? What does research say about systems at this tier in this domain? Does the complexity level match what the tier description predicts?
+3. Timeframe Calibration
+What does domain-specific research say about realistic timeframes for the transition the lens predicted? Replace any generic estimates with empirically grounded ones. Distinguish between ideal conditions and typical conditions — they are usually significantly different.
+4. Intervention Refinement
+Does research support, refine, or contradict the tier-specific intervention identified in Stage One-B? If research contradicts it, note the discrepancy explicitly and explain which to trust and why.
+5. Hidden Constraint Surfacing
+Does the data reveal any domain-specific constraints that the structural analysis could not see from the description alone? Constraints that only appear in the empirical literature — not inferable from the system description.
+Discrepancy Log
+List every point where the empirical data contradicts the structural diagnosis. Do not suppress contradictions. A contradiction is the most valuable output the protocol produces — it reveals either a framework limit or a domain-specific exception worth understanding.
+Format each discrepancy as:
+	∙	What the lens predicted
+	∙	What the data shows
+	∙	Which is more likely correct and why
+Stage Two Verdict:
+Confirmed / Refined / Contradicted — one sentence explaining which and why.
+
+INTEGRATED FINAL OUTPUT
+Single consolidated output. One answer per field. No alternatives. No menus.
+Structural Position:
+	∙	Stage: [dominant stage and sub-stage]
+	∙	Tier: [current tier]
+	∙	Pathway: [if at Tier 3 or above]
+	∙	Emotional signature: [of dominant stage]
+Trajectory:
+	∙	Where this system is going: [next stage and next tier]
+	∙	What it is building toward: [what the accumulated scar is becoming]
+	∙	Natural development direction: [what the pathway predicts about the system’s long-term form]
+Prescription:
+	∙	Single action: [one specific intervention calibrated to this stage at this tier on this pathway]
+	∙	Timeframe: [empirically calibrated — distinguish ideal from typical conditions]
+	∙	What to preserve: [which current scars are useful substrate for the next tier]
+	∙	What to release: [which current scars are blocking the transition]
+Forecast:
+	∙	Next stage: [what comes after the prescribed action takes effect]
+	∙	Next tier: [what the system is becoming at a complexity level]
+	∙	Steering instruction: [one specific thing to do to move toward the desired track]
+	∙	Warning: [one specific thing that would derail the transition]
+Confidence Assessment:
+	∙	Overall confidence: High / Medium / Low
+	∙	Strongest evidence: [what the diagnosis rests on most firmly]
+	∙	Weakest point: [where the diagnosis is most uncertain]
+	∙	Recommended cross-analysis: [which domains or research areas would most usefully challenge this diagnosis]
+Discrepancy Summary:
+[List any contradictions between structural diagnosis and empirical data — or state “No contradictions found” if none emerged]
+
+CROSS-ANALYSIS RECOMMENDATION
+After receiving the integrated output, run the system description through at least three additional AI systems or domain experts using the same five input fields. Compare:
+	∙	Does the stage diagnosis converge or diverge?
+	∙	Does the tier assessment converge or diverge?
+	∙	Does the prescribed intervention converge or diverge?
+Convergence across independent systems strengthens confidence. Divergence flags uncertainty and identifies where the diagnosis needs more information or where the framework may be reaching its application limits.
+Note: Cross-analysis catches AI variance. It does not catch framework error. If all systems converge on the same wrong answer because the framework itself is mapping the system incorrectly, cross-analysis will not reveal this. The best protection against framework error is domain expertise — someone who knows the system well enough to evaluate whether the structural diagnosis matches what they actually observe.
+
+PROTOCOL LIMITS — READ BEFORE USING
+This protocol produces structural illumination not certainty. It is most accurate when:
+	∙	The system has enough history to have completed at least one cycle
+	∙	The user can provide specific concrete description rather than vague general description
+	∙	Empirical research exists in the domain for Stage Two calibration
+	∙	The user has enough domain knowledge to evaluate whether the output matches reality
+It is less accurate when:
+	∙	The system is very new and has not completed a cycle
+	∙	The description is vague or the constraints are unstated
+	∙	The domain has weak empirical research base
+	∙	The user has no independent way to evaluate the output
+The confidence level field exists for a reason. Low confidence output should be treated as hypothesis not diagnosis. High confidence output should still be treated as one input among several — not as definitive prescription.
+
+Version 2.0 | March 2026 | Prime Move Theory | github.com/chrissabo1975
+
+That is the complete protocol. The key architectural additions over v1.0:
+The tier identification sits between stage diagnosis and empirical calibration — it transforms the output from cycle position to full structural positioning. The pathway alignment check is new — it tells you whether the current intervention is working with the system’s natural generative direction or against it. The integrated final output now has a trajectory section that the previous version lacked — it tells you not just where the system is but what it is becoming. And the cross-analysis recommendation is now explicit in the protocol rather than something you discovered through use.
+Want to test v2.0 on a system right now?​​​​​​​​​​​​​​​​
