@@ -2,7 +2,7 @@ The Prime Move: A Universal Grammar of Change
 Author: Chris Sabo (C.m. Nagy) Affiliations: Independent Researcher, Needlework Tattoo Co. Date: April 2026 Status: Position Paper / Framework Introduction
 Abstract
 I propose that a single five-stage generative cycle — Split → Tension → Failed Merge → Scar → Decay — underlies every process that produces persistent structure. This “Prime Move” is not a model of any specific domain. It is a universal grammar of change itself.
-Derived from three minimal axioms about distinction and irreversibility, the grammar predicts that scar accumulation follows the Fibonacci recurrence, growth ratios converge to the golden ratio φ ≈ 1.618, and hierarchical complexity unfolds through a fixed sequence of six tiers reachable by three distinct pathways (Spiral, Optimization, Aggregation).
+Derived from four minimal axioms about distinction and irreversibility, the grammar predicts that scar accumulation follows the Fibonacci recurrence, growth ratios converge to the golden ratio φ ≈ 1.618, and hierarchical complexity unfolds through a fixed sequence of six tiers reachable by three distinct pathways (Spiral, Optimization, Aggregation).
 It works as a translation layer: the same five-stage shape appears in mitosis, conversation, tattooing, and language evolution. This paper introduces the grammar, demonstrates it in action, and argues that it meets every criterion for a true universal grammar: generativity, recursivity, substrate independence, and falsifiability.
 1. The Problem of Disciplines
 One simple sentence — “The dog is chasing the bouncing ball downhill” — needs physics for gravity and momentum, biology for muscle and instinct, psychology for desire and attention, and linguistics for syntax and meaning.
@@ -17,7 +17,9 @@ Tension	T	Imbalance or pressure forms
 Failed Merge	FM	Attempted resolution that leaves residue
 Scar	Sc	Residue stabilizes as persistent structure
 Decay	D	Release that enables the next cycle
-This cycle is not arbitrary. It is the smallest structure that can be derived from three axioms:
+This cycle is not arbitrary. It is the smallest structure that can be derived from four axioms:
+    0.   For any structure to exist, an original undifferentiated state must be violated by the act of distinction. This violation is irreversible.
+
 	1.	Unity precedes distinction (Axiom 1)
 	2.	Distinction is necessary for any non-trivial process (Axiom 2)
 	3.	Distinction cannot be perfectly erased — it always leaves a scar (Axiom 3)
