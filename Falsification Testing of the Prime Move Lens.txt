@@ -1,6 +1,6 @@
 Preliminary Falsification Testing of the Prime Move Lens: A Multi-Model Empirical Validation 
 By: Christopher M. Sabo
-
+https://doi.org/10.5281/zenodo.20456888
 Abstract
 
 We empirically validated the Prime Move lens—a five‑stage structural diagnostic (Split, Tension, Failed Merge, Scar, Decay)—through a series of falsification tests. Using eight AI models (Claude, ChatGPT, Gemini, Copilot, Perplexity, Meta, Grok, Google‑Gemini), we applied the lens to a negative control (random number sequence), a positive control (bean germination process), four edge cases, and neutral prompts (no stage framework). After refining definitions—most notably tightening Tension to exclude random variation and complementary differentiation—the lens correctly rejected randomness (6/8 AIs returned null) and produced unanimous stage assignments on the positive control (all 8 AIs identified only a Split, with no false positive for Tension, Failed Merge, Scar, or Decay). Edge cases yielded interpretable partial structures, with disagreements highlighting useful boundary conditions. Reproducibility was high across models and days for core stages. The lens distinguishes structured processes from noise, provides a falsifiable, standardised output, and is now available as a unified prompt. This validation demonstrates that the Prime Move lens is a reliable instrument for diagnosing persistent causal structure.
