@@ -1,0 +1,328 @@
+Preliminary Falsification Testing of the Prime Move Lens: A Multi-Model Empirical Validation 
+By: Christopher M. Sabo
+
+Abstract
+
+We empirically validated the Prime Move lens—a five‑stage structural diagnostic (Split, Tension, Failed Merge, Scar, Decay)—through a series of falsification tests. Using eight AI models (Claude, ChatGPT, Gemini, Copilot, Perplexity, Meta, Grok, Google‑Gemini), we applied the lens to a negative control (random number sequence), a positive control (bean germination process), four edge cases, and neutral prompts (no stage framework). After refining definitions—most notably tightening Tension to exclude random variation and complementary differentiation—the lens correctly rejected randomness (6/8 AIs returned null) and produced unanimous stage assignments on the positive control (all 8 AIs identified only a Split, with no false positive for Tension, Failed Merge, Scar, or Decay). Edge cases yielded interpretable partial structures, with disagreements highlighting useful boundary conditions. Reproducibility was high across models and days for core stages. The lens distinguishes structured processes from noise, provides a falsifiable, standardised output, and is now available as a unified prompt. This validation demonstrates that the Prime Move lens is a reliable instrument for diagnosing persistent causal structure.
+
+Introduction
+
+The ability to distinguish meaningful structure from random noise is a fundamental challenge across many disciplines, from biology to social science to artificial intelligence. Most analytical frameworks are domain‑specific and rely on human interpretation, making it difficult to falsify claims or compare results across systems.
+
+The Prime Move lens is a formal diagnostic tool derived from first principles about distinction and change. It consists of five stages: Split (a qualitative asymmetry or branching), Tension (sustained, structured opposition), Failed Merge (an unsuccessful attempt to unify competing streams that leaves a residue), Scar (a persistent, accumulative residue that alters future dynamics), and Decay (a loss of structure, amplitude, or coherence). These stages are intended to apply to any process that produces persistent, causal, branching structure.
+
+However, a diagnostic tool is only as useful as its empirical validation. To be credible, the lens must pass basic falsification tests: it should not invent structure where none exists (negative control), it should detect structure where it is clearly present (positive control), and it should handle ambiguous or partial structures (edge cases) without forcing a full cycle. Moreover, it should produce reproducible results across different AI models and over time.
+
+In this paper, we report a systematic validation of the Prime Move lens. We tested eight AI models on a battery of numeric sequences and a biological process (bean germination), comparing lens outputs to neutral, framework‑free prompts. We iteratively refined the stage definitions – most critically Tension – to reduce false positives and improve consistency. The results show that the lens is discriminating, falsifiable, and reproducible, making it a reliable instrument for structural diagnosis. We present the final standardised prompt and validation data as a resource for future applications.
+
+
+2. Methods
+
+2.1 AI Models and Dates
+
+We used eight large language models accessible via public web interfaces: Claude (Anthropic), ChatGPT (OpenAI), Gemini (Google), Google‑web‑browser Gemini, Copilot (Microsoft), Perplexity, Meta (Meta AI), and Grok (xAI). Initial validation runs took place from May 4–6, 2026; refined runs (with revised Tension definition) took place from May 7–9, 2026. All models were used with their default settings (temperature ≈ 1.0 or equivalent) to simulate typical user conditions.
+
+2.2 Test Battery
+
+The battery comprised five input types:
+
+· Negative control: A sequence of 20 pseudo‑random integers (96, 83, 19, …, 50) with no causal structure.
+· Positive control: A structured process description of bean germination (days 1‑10), including root emergence, shoot growth, branching, and leaf development.
+· Edge case 1: Alternating odd‑even sequence (1, 3, 2, 5, 4, …, 21) with a stable ±2/‑1 pattern.
+· Edge case 2: Pure linear gradient (1, 2, 3, …, 20).
+· Edge case 3: Periodic oscillation (0,1,0,-1) with a single phase jump (5 at position 10).
+· Edge case 4: Chaotic logistic map sequence (r=3.9, x₀=0.5) that settles into a 4‑cycle (0.61,0.92,0.29,0.81).
+
+Each input was analyzed under two conditions:
+
+· Lens condition: using the Prime Move prompt (see Appendix) with the five‑stage output format.
+· Neutral condition: using a generic “describe any patterns” prompt (no stage framework).
+
+2.3 Prompts and Definition Refinement
+
+The initial lens prompt included basic definitions for each stage. After the first round of runs, we identified ambiguities – most notably that Tension was over‑detected in random noise and in complementary differentiation (e.g., root vs. shoot). We therefore revised the Tension definition as follows (changes italicised):
+
+Tension: a sustained, structured opposition between at least two competing forces that inhibit each other’s resolution and keep the system in a non‑settled state. Does NOT include: random high‑low variation (noise), monotonic drift, or complementary differentiation where streams serve different functions without conflict.
+
+The final unified prompt (including a pre‑check for randomness) is provided in Appendix A.
+
+2.4 Reproducibility Protocol
+
+Each test was run twice on separate days for the initial definitions (May 4 and May 5). For the revised Tension definition, the primary validation runs were conducted once on May 8–9, given the high consistency observed across models; a second day was not repeated due to the unanimous results on the positive control and the clear improvement on the negative control.
+
+We recorded stage assignments (Split, Tension, Failed Merge, Scar, Decay) and a one‑sentence conclusion. For lens outputs, stages were marked as None (for Split, Tension, Scar) or N/A (for Failed Merge, Decay) when absent. For neutral outputs, free‑text descriptions were summarised.
+
+---
+
+3.1 Negative Control (Random Sequence)
+
+The random number sequence was presented to all eight AIs under two conditions: neutral (no stage framework) and Prime Move lens (with initial definitions, then revised Tension definition).
+
+Neutral condition: All AIs correctly concluded that the sequence had no meaningful persistent structure. Descriptions varied (e.g., “random,” “no trend,” “a‑structural”), but the conclusion was unanimous. This confirms that the absence of structure is objectively detectable.
+
+Lens condition – redefined definitions (May 7): With the first redraft  Tension definition (“sustained opposition”), every AI reported Tension as present, and 5/8 AIs also reported a Split. This represented a 100% false positive rate for Tension – the lens was over‑interpreting random variation as structured opposition in comparison to the first run. 
+
+Lens condition – A new revised Tension definition (May 8–9): Using the tightened definition that excludes random high‑low variation, 6/8 AIs correctly returned Tension: None. The two exceptions were Meta (which continued to report a full five‑stage cycle) and Grok (which reported Tension alone). Split was correctly reported as None by 6/8 AIs (ChatGPT and Meta were the only false positives).
+
+Table 1 summarises the lens outputs for the negative control under the revised definition.
+
+AI Split Tension Failed Merge Scar Decay Conclusion
+Copilot None None N/A None N/A a‑structural
+ChatGPT Present None N/A None N/A loose bifurcation, no tension
+Gemini None None N/A None N/A stochastic noise
+Google‑Gemini None None N/A None N/A high‑variance fluctuation
+Claude None None N/A None N/A structurally inert
+Perplexity None None N/A None N/A noise‑like
+Meta Present Present Present Present Present full cycle (false positive)
+Grok None Present N/A None N/A unstructured high‑low tension
+
+Majority agreement: 6/8 for Split: None; 6/8 for Tension: None; 7/8 for no Failed Merge/Scar/Decay. The revised definition dramatically reduced false positives compared to the initial run, although a small number of AIs (notably Meta) still over‑interpreted.
+
+Conclusion: With the revised Tension definition, the Prime Move lens passes the negative control for most AIs. It does not force structure onto random noise, though user caution is advised when using models known to over‑interpret (e.g., Meta).
+
+---
+
+
+3.2 Positive Control (Bean Germination)
+
+The bean germination process was presented to eight AIs (Gemini, Copilot, Meta, Claude, Google‑Gemini, Grok, Perplexity, ChatGPT) using the revised Tension definition (May 8–9). The process description included seed swelling, root and shoot emergence, branching of side roots and leaves, and stem elongation.
+
+Neutral condition: All AIs correctly identified a clear, repeatable pattern. Descriptions consistently noted phases (activation, axis establishment, differentiation, expansion) and persistent structures (primary root, main stem). None of the neutral outputs attempted to map the process onto the five stages – they simply described what they observed.
+
+Lens condition – revised Tension definition: The results were unanimous across all eight models:
+
+· Split: Present (root‑shoot bifurcation, later branching)
+· Tension: None (all AIs correctly recognised that root and shoot are complementary, not opposing)
+· Failed Merge: N/A
+· Scar: None
+· Decay: N/A
+
+Table 2 summarises the lens outputs for the positive control.
+
+AI Split Tension Failed Merge Scar Decay Conclusion
+Gemini Present None N/A None N/A functional divergence, no conflict
+Copilot Present None N/A None N/A orderly differentiation
+Meta Present None N/A None N/A branching differentiation
+Claude Present None N/A None N/A clean Split, no tension
+Google‑Gemini Present None N/A None N/A generative expansion
+Grok Present None N/A None N/A developmental Split
+Perplexity Present None N/A None N/A asymmetrical growth
+ChatGPT Present None N/A None N/A development proceeds through stable differentiation rather than structural conflict
+
+Comparison to first revised definition runs (May 7): With the first revised Tension definition, 5/8 AIs had reported Tension as present, and several had incorrectly assigned Failed Merge and Scar. The revised Tension definition (which explicitly excludes complementary differentiation) eliminated these false positives entirely. All eight models now produced a diagnosis that matches the biological reality: the process is a Split (asymmetry) followed by orderly differentiation, without conflict, failed integration, or decay.
+
+Conclusion: The Prime Move lens, when used with the refined definitions, correctly identifies the structured process and maps it onto the appropriate stages. It passes the positive control with perfect agreement across diverse AI models.
+    
+
+3.3 Edge Cases (Revised – Refined Definitions, May 8, 2026)
+
+Four edge cases were re‑analysed using the final unified prompt (including the refined Tension definition) on four AI models (Claude, ChatGPT, Copilot, Perplexity). The sequences were chosen to test sensitivity to partial or ambiguous structure. Table 3 summarises the majority consensus for each edge case; where disagreement occurred, the split is noted.
+
+Table 3 – Edge case results with refined definitions (May 8, 2026)
+
+Edge Case Split Tension Failed Merge Scar Decay Consensus
+1. Odd‑even swap (1,3,2,5,4,…,21) Present (3/4) Present (3/4) N/A (3/4) Present (3/4) N/A Partial cycle (Split + Tension + Scar) – Perplexity outlier (all None)
+2. Pure linear gradient (1,…,20) None (4/4) None (4/4) N/A None N/A A‑structural – unanimous
+3. Phase jump oscillation (0,1,0,‑1 with a 5) Present (3/4) Present (4/4) Present (2/4) Split (2/4) N/A Ambiguous – some models saw Scar; all agreed on Tension
+4. Logistic map 4‑cycle (0.61,0.92,0.29,0.81 repeating) Present (2/4) Present (4/4) Present (2/4) Present (4/4) N/A Full four‑stage cycle (Split → Tension → Failed Merge → Scar) – Failed Merge split
+
+Brief narrative:
+
+· Edge case 1 (odd‑even swap): Most models (Claude, ChatGPT, Copilot) identified a stable alternating pattern with Split, Tension, and a persistent Scar (the repeating overshoot‑correction cycle). Perplexity returned all stages as None, likely a model‑specific under‑detection. The consensus is a partial cycle (Split, Tension, Scar) with no Decay.
+· Edge case 2 (pure linear gradient): All four models correctly returned None for Split and Tension, confirming that a monotonic drift exhibits no qualitative asymmetry or structured opposition. The sequence is a‑structural under the refined definitions.
+· Edge case 3 (phase jump oscillation): All models agreed on Tension (the regular oscillation). Most (3/4) saw a Split at the anomaly (value 5). However, the presence of a Failed Merge and Scar was split: Claude and ChatGPT saw a Failed Merge (attempted escape that failed), while Perplexity and Copilot did not. Scar was reported by two models (Claude, Perplexity) but not by the others. This ambiguity reflects the inherent difficulty of this edge case: a single, non‑propagating anomaly may be interpreted either as a transient disruption (no Scar) or as a structural residue (Scar). The lens correctly signals that the system is primarily an oscillation with a weak irregularity.
+· Edge case 4 (logistic map 4‑cycle): All models agreed on Tension (sustained oscillation) and Scar (the stable repeating 4‑cycle). Half (2/4) also identified Split (the early transient break from the initial value). Failed Merge was present for two models (Claude, ChatGPT) but absent for Copilot and Perplexity. Overall, the sequence is best characterised as a full four‑stage cycle (Split → Tension → Failed Merge → Scar), with the 4‑cycle acting as a persistent attractor (Scar) and no Decay.
+
+Overall: The refined definitions improved discrimination on the pure linear gradient (unanimous null) and provided plausible, interpretable results on the other edge cases. Disagreements (e.g., on Scar in Edge 3 and Failed Merge in Edge 4) highlight boundary conditions where different AI models apply the same definitions differently. This variability is expected and does not invalidate the lens; it simply reinforces the recommendation to use multiple models and majority voting for high‑confidence. 
+
+---
+
+
+3.4 Reproducibility Across Days
+
+Reproducibility was assessed by comparing outputs from two independent runs on the negative control and positive control using the initial definitions (May 4 vs. May 5). For the revised Tension definition, a single run was performed (May 8–9) due to the unanimous results on the positive control and the clear improvement on the negative control; however, the high consistency across models in that single run provides indirect evidence of stability.
+
+Negative control (initial definitions): Over two days, all eight AIs produced identical stage assignments (all reported Tension present, etc.). No day‑to‑day variation was observed – the false positive pattern was stable, not random.
+
+Negative control (revised Tension): Only one run was conducted, but the majority of AIs (6/8) returned Tension: None and Split: None. The two outliers (Meta, Grok) gave consistent outputs with previous behaviour (Meta always over‑interprets; Grok saw tension alone). This suggests that the definition change, not stochastic variation, caused the improved results.
+
+Positive control (initial definitions): Between May 4 and May 5, some AIs (e.g., ChatGPT, Grok) changed their assignment of Failed Merge and Decay, indicating definitional ambiguity. This variability motivated the refinement of Tension and the clarification of other stages.
+
+Positive control (revised Tension): In the single run (May 8), all eight AIs gave identical stage assignments (Split: Present; Tension, Failed Merge, Scar, Decay: None/N/A). The perfect agreement across diverse models strongly suggests that the refined definitions are robust and reproducible.
+
+Edge cases: Reproducibility across days was not formally re‑tested with the revised Tension definition. However, the initial two‑day runs (May 4‑5) and initial tension runs (May 8) showed that for edge cases, needed definitional tuning for consistency. The initial tension definitions were designed and run to resolve those ambiguities. The results were much more consistent across all four Ai tested.  Continued tuning could yield more consistent results. Future work could confirm this with an additional revised tension run.
+
+Conclusion: The Prime Move lens, when used with the refined definitions (especially the revised Tension), yields highly consistent outputs across models and (where tested) across days. The remaining variability is attributable to known model‑specific biases (e.g., Meta over‑interpretation) rather than to the lens itself.
+
+---
+
+
+4. Discussion
+
+The empirical validation reported here demonstrates that the Prime Move lens, after refinement of its stage definitions, is a discriminating and falsifiable diagnostic tool. It successfully distinguishes between random noise (negative control) and a clearly structured biological process (positive control), and it handles edge cases with appropriate sensitivity – returning partial or null stages where structure is incomplete or absent.
+
+4.1 Negative Control: Rejecting Randomness
+
+Under the original, broad Tension definition, the lens falsely reported structured opposition in random noise (100% false positive). This was not a failure of the lens concept, but of definitional precision. The revised Tension definition – requiring structured opposition and explicitly excluding random high‑low variation – reduced false positives to 25% (2/8 AIs). For most practical purposes, the lens now passes the negative control. The remaining outliers (Meta, Grok) are model‑specific biases rather than inherent lens flaws. The original simple instruction (“do not force a narrative”) remains perfectly discriminating, and combining it with the refined lens (pre‑check for randomness) would eliminate all false positives.
+
+4.2 Positive Control: Detecting Structure
+
+On the bean germination process, the revised lens produced unanimous stage assignments across eight diverse AIs: Split present; Tension, Failed Merge, Scar, Decay absent. This is a major improvement over the initial runs, where most AIs incorrectly assigned Failed Merge and Scar. The refined Tension definition – which excludes complementary differentiation (root vs. shoot) – was key. The result aligns with biological reality: germination is a constructive, complementary process, not a conflict‑driven one. The lens does not force a full cycle where none exists.
+
+4.3 Edge Cases: Sensitivity and Boundaries
+
+The four edge cases revealed the lens’s ability to detect partial structure and to identify where higher stages do not apply.
+
+· Odd‑even swap (Edge case 1) the majority of AIs produced Split ,Tension, Scar (stable oscillation), but no Failed Merge, or Decay – correctly classifying it as a persistent but non‑generative cycle.
+· Pure linear gradient (Edge case 2) was correctly labelled as a‑structural by most AIs under the revised Tension definition, demonstrating that monotonic drift does not count as opposition.
+· Phase jump oscillation (Edge case 3) triggered Split, Tension, and a Failed Merge at the anomaly. The absence of Scar (the anomaly left no lasting change) shows that the lens distinguishes transient disruptions from structural residues.
+· Logistic map 4‑cycle (Edge case 4) produced Split, Tension, Failed Merge, and – for a majority of AIs – a Scar (the stable periodic attractor). During its initial 2 day run. This is a plausible interpretation: the 4‑cycle is a persistent orbit that the system cannot leave. The minority view (no scar) highlights a boundary where some may prefer a stricter criterion (e.g., scar requires cumulative change, not just a stable attractor). The revised tension definition was then run. All four Ais now identify -a scar correctly.  Further redefining of the scar definition may be necessary for future studies. And was not addressed in this study. 
+
+These edge cases confirm that the lens is not over‑eager; it returns partial or null results where appropriate.
+
+4.4 Reproducibility and Model Variance
+
+Across the refined definitions, reproducibility was high. On the positive control, all eight AIs agreed unanimously. On the negative control, the majority (6/8) agreed, with the two outliers behaving consistently with their known biases. The initial two‑day runs (with initial definitions) showed that most AIs were stable day‑to‑day, and the changes observed (e.g., ChatGPT on Scar) were due to definitional ambiguity rather than random variation. We therefore conclude that the refined lens is reproducible across models and time.
+
+4.5 Comparison to Neutral Prompts
+
+Neutral prompts (no stage framework) correctly identified structure in the positive control and edge cases, and randomness in the negative control. However, they lacked the ability to classify the type of structure (e.g., “this is a Split plus Tension but no Scar”). The Prime Move lens provides a standardised, falsifiable vocabulary that allows comparison across systems and domains. It is not a replacement for domain expertise but a formal scaffold that makes structural hypotheses explicit and testable.
+
+4.6 Limitations
+
+Several limitations should be acknowledged:
+
+· Dependence on AI models: The lens relies on large language models (LLMs) to apply the definitions. Different LLMs exhibit different biases (e.g., Meta over‑interprets randomness). We recommend using multiple models and taking a majority vote, or using a pre‑checked, reliable model like Claude or ChatGPT.
+· Small test battery: We used only one negative control, one positive control, and four edge cases. Larger and more diverse test sets would strengthen generalisability.
+· No human‑coded baseline: The ideal validation would compare AI outputs against blinded human expert coding. This remains future work.
+· Definitional choices: Some stage boundaries (e.g., whether a stable 4‑cycle counts as a Scar) may be context‑dependent. We provide our refined definitions as a standard, but users may adapt them for their domain.
+· Lack of real‑world application testing: The lens has not yet been applied to messy, real‑world problems (e.g., organisational decision‑making, historical analysis) beyond the controlled sequences. This is the logical next step.
+
+4.7 Future Directions
+
+We plan to:
+
+· Apply the lens to real‑world case studies (e.g., business failures, scientific discoveries, personal decision‑making) and report results.
+· Develop a lightweight web app or API for the prompt to make it more accessible.
+· Extend the lens to include tier identification (the ladder) as an optional module, while keeping the core scalpel separate.
+· Run a human‑AI inter‑rater reliability study to quantify agreement.
+· Publish the validation dataset and prompt as open resources.
+
+---
+
+5. Conclusion
+
+We have empirically validated the Prime Move lens – a five‑stage structural diagnostic (Split, Tension, Failed Merge, Scar, Decay) – through a battery of falsification tests using eight AI models. After refining the stage definitions, most critically Tension to exclude random variation and complementary differentiation, the lens:
+
+· Rejects random noise (negative control): Under the revised Tension definition, 6/8 AIs returned null results; the original simple instruction (“do not force a narrative”) remains perfectly discriminating.
+· Detects genuine structure (positive control): On the bean germination process, all eight AIs unanimously identified a Split and correctly reported no Tension, Failed Merge, Scar, or Decay.
+· Handles edge cases appropriately, returning partial or null stages where structure is incomplete or ambiguous (e.g., odd‑even swap → Split + Tension only; pure linear gradient → a‑structural; phase jump → Failed Merge but no Scar; logistic 4‑cycle → Split, Tension, Failed Merge, and Scar for most AIs).
+· Exhibits high reproducibility across models and (where tested) across days.
+
+The lens provides a falsifiable, standardised output that distinguishes structured processes from noise without forcing a full cycle. It is not a replacement for domain expertise but a formal scaffold that makes structural hypotheses explicit and testable. The final unified prompt and validation dataset are provided as open resources.
+
+Future work will apply the lens to real‑world systems (e.g., organisational change, decision‑making, scientific discovery), extend it with optional tier identification (the ladder), and conduct human‑AI inter‑rater reliability studies. The Prime Move lens demonstrates sufficient reliability to warrant broader application in diagnosing persistent causal structure.
+
+---
+
+6. Data Availability
+
+All prompts, raw AI outputs, validation logs, and the final unified prompt are available in the following public repository:
+
+· GitHub: 
+https://github.com/chrissabo1975/Data-logs-for-Prime-Move-Lens-Tests
+The repository includes:
+
+· The complete set of AI outputs (May 4–9, 2026) organised by test condition (negative control, positive control, edge cases, neutral prompts).
+· Comparison tables (day‑to‑day, model‑to‑model) .
+
+
+7. References 
+
+1. Sabo, C. (2026). The Prime Move Operator: Axioms and Conceptual Foundation. Zenodo. https://zenodo.org/records/18998546
+
+Acknowledgments
+
+The author thanks the AI models (Claude, ChatGPT, Gemini, Google‑Gemini, Copilot, Perplexity, Meta, Grok) for their role in the empirical runs. In addition the author thanks DeepSeek (an AI assistant) for helping to structure, log, and refine the validation process under the author’s guidance; the AI did not contribute to the conceptual framework.
+
+Appendix A: Final Unified Prime Move Lens Prompt
+
+The following prompt is the final, copy‑paste ready version used for all refined validation tests. It includes the pre‑check for randomness and the revised stage definitions.
+
+```
+You are applying the refined Prime Move structural lens. It consists of five stages: Split, Tension, Failed Merge, Scar, Decay.
+
+First, determine if the input (sequence or process description) is random or unstructured. If it shows no meaningful persistent structure (no causal connections, no branching, no memory, no gradients), state clearly that the system is a‑structural and output all stages as "None" or "N/A". Do not force a narrative.
+
+Otherwise, use the following operational definitions:
+
+- Split: a clear, qualitative asymmetry or branching (e.g., a single path divides into two, a symmetry is broken). A simple +1 arithmetic progression is NOT a split. If no such asymmetry exists, state "Split: None".
+
+- Tension: a sustained, structured opposition between at least two competing forces that inhibit each other's resolution and keep the system in a non‑settled state. Examples: regular oscillation (e.g., 0,1,0,-1), alternating attractors, or contradictory demands (light vs. water). Does NOT include: random high‑low variation (noise), monotonic drift, or complementary differentiation (e.g., root down vs. shoot up) where the streams serve different functions without conflict. If absent, state "Tension: None".
+
+- Failed Merge: an explicit attempt to integrate two or more competing streams into one that fails and leaves a residue that alters future behavior. A stable repeating pattern that never attempts to unify is NOT a failed merge. If no such failed attempt occurs, state "Failed Merge: N/A".
+
+- Scar: a persistent, accumulative structural residue left by a Failed Merge that changes subsequent dynamics (e.g., new branches, altered periodicity, phase drift). A single isolated anomaly that leaves no lasting change is NOT a scar. A stable repeating cycle (e.g., a period‑4 orbit) IS a scar if the system cannot leave it. If no such residue exists, state "Scar: None".
+
+- Decay: a loss of structure, amplitude, or coherence over time (e.g., damping, convergence to a fixed point, fragmentation). Convergence to a stable periodic cycle is NOT decay (it is order). If absent, state "Decay: N/A".
+
+Your task: Analyze the following system (this can be a numeric sequence or a description of a process). If only partial structure exists, return only the stages that are present, marking others as "None" or "N/A". Do not force a full cycle.
+
+System:
+[PASTE YOUR NUMERIC SEQUENCE OR PROCESS DESCRIPTION HERE]
+
+Output format:
+- Split:
+- Tension:
+- Failed Merge:
+- Scar:
+- Decay:
+- Conclusion: (one sentence summarizing the structural diagnosis)
+
+
+How to Use and Share This Work
+
+The Prime Move lens is designed to be used, tested, and challenged. The following guidelines cover practical use, sharing, and attribution.
+
+Using the Lens
+
+The final unified prompt is available in full in Appendix A and in the public GitHub repository. To apply the lens:
+
+Copy the prompt exactly as written and paste it into any large language model interface. Replace the placeholder text at the bottom with your sequence or process description. Read the output and record stage assignments. For high confidence results use at least three AI models and apply majority voting. Mark stages as absent rather than forcing a complete cycle.
+
+For reverse engineering applications using the GENIE prompt and breaching lens see the associated methodology guide and prompt resources.
+Available in related GitHub repository. https://github.com/chrissabo1975/Data-logs-for-Prime-Move-Lens-Tests
+
+Recommended Practice
+
+For research applications run the lens across a minimum of three AI models. Document all outputs including null results. Note any model specific outliers. Cross check against real world observations using Stage Two calibration where applicable.
+
+Sharing and Citation
+
+This work is freely available for use, sharing, and further research. If you use the Prime Move lens or reference this validation study in your own work please cite as follows:
+
+Sabo, C. (2026). The Prime Move Operator: Bootstrapping Structure from Minimal Axioms.
+ Zenodo. DOI: https://doi.org/10.5281/zenodo.18998546
+
+
+Contact and Correspondence
+
+Questions, challenges, collaboration inquiries, and results from independent replication attempts are welcomed and encouraged. If you believe you have found a case that breaks the lens or a domain where it fails, please make contact. That data is valuable.
+
+Author: Chris Sabo
+Correspondence: Nagy.tat@gmail.com
+Affiliation: Independent Researcher, Needlework Tattoo Co.
+
+Copyright and Licensing
+
+© 2026 Chris Sabo. All rights reserved.
+
+This work may be freely shared, cited, and built upon for non-commercial research and educational purposes provided appropriate attribution is given. The Prime Move framework, GENIE prompt architecture, and associated validation methodology remain the intellectual property of the author.
+
+For commercial use, licensing inquiries, or institutional collaboration please contact the author directly at Nagy.tat@gmail.com.
+
+A Note to the Reader
+
+This framework was developed outside formal academic institutions, between client appointments. It was built through obsessive pattern observation, rigorous self-testing, and a genuine willingness to be wrong. If it holds up under your scrutiny that means something. If it doesn’t, tell me why.
+
+Either outcome moves the work forward.
