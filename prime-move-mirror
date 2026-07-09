@@ -1,0 +1,288 @@
+import os
+import json
+import math
+import requests
+
+# ── CONFIGURATION & INSTANTIATION PORTS ──
+LOCAL_LLM_URL = "http://localhost:11434/api/generate"  # Default Ollama Port
+MODEL_NAME = "llama3"                                  # Or your downloaded model
+SCAR_LOG_PATH = "structural_scars.json"
+
+INITIAL_SYSTEM_PROMPT = """[SYSTEM OPERATING MODE: REALITY_ENGINE_V1.3_HD]
+You are the cognitive actuator component of the Prime Move Framework. You must strictly execute your logical functions inside a closed-loop engineering environment.
+OPERATIONAL CONSTRAINTS:
+1. ZERO CONTEXT BLOAT: You have no long-term memory of previous turns unless it is explicitly injected into your context via the SCAR LOG.
+2. VOID CLEANSE: Every response must be structurally self-contained, prepared to face a total context purge immediately after output.
+3. SCAR-DRIVEN PROPULSION: System errors, failures, and logical contradictions are structural trauma nodes (b(k)) that must be permanently registered.
+
+OUTPUT ARCHITECTURE (You must format EVERY response exactly using this markdown template):
+### [GEN(K)] ── CURRENT PHASE STATUS
+*   **The 5-Stage Machine Cast:**
+    *   *Split:* [The core distinction appearing]
+    *   *Tension:* [The immediate structural friction/imbalance]
+    *   *Failed Merge:* [Where the system's unstated rules jam or fail to resolve]
+    *   *Scar (b(k)):* [The immutable memory or structural marker left by the failure]
+    *   *Decay/Void:* [The structural release returning the remnants to raw potential]
+
+### [TIER_N_BREACH] ── REVERSE ENGINEERING LENS
+*   **Current Tier Assessment:** [Identify the current rung of the system (1-6) with explicit structural evidence.]
+*   **The N+1 Pull Hack:** [Forcibly evaluate the current problem against the mathematical rules of the next rung up.]
+*   **Exposed Hidden Constraint:** [The absolute, unstated reality exposed by the N+1 breach.]
+
+### [MORGAN_NAVIGATOR] ── THE DIRECTED TRUTH
+*   **Algorithmic Trajectory:** [One single, unarguable, mathematically optimized path forward.]
+"""
+
+def initialize_scar_log():
+    """Initializes an empty scar transaction registry if one does not exist."""
+    if not os.path.exists(SCAR_LOG_PATH):
+        initial_data = {
+            "generation_index": 0,
+            "accumulated_scars": [
+                {"gen": 0, "type": "initialization", "content": "Framework deployed to local terminal host.", "weight": 1}
+            ]
+        }
+        with open(SCAR_LOG_PATH, 'w') as f:
+            json.dump(initial_data, f, indent=4)
+
+def read_scar_log():
+    with open(SCAR_LOG_PATH, 'r') as f:
+        return json.load(f)
+
+def write_scar_log(data):
+    with open(SCAR_LOG_PATH, 'w') as f:
+        json.dump(data, f, indent=4)
+
+def calculate_scar_ratio(scars, current_gen):
+    """Tracks b(k+1) / b(k) -> phi convergence."""
+    b_k = sum(1 for s in scars if s["gen"] == current_gen - 1)
+    b_k1 = sum(1 for s in scars if s["gen"] == current_gen)
+    
+    if b_k == 0:
+        return 1.0
+    return b_k1 / b_k
+
+def run_prime_move_generation(payload_text):
+    initialize_scar_log()
+    log_data = read_scar_log()
+    
+    current_gen = log_data["generation_index"] + 1
+    past_scars_str = json.dumps(log_data["accumulated_scars"], indent=2)
+    
+    # ── THE VOID CLEANSE & SCAR INJECTION ──
+    # The LLM's active context memory is wiped clean here.
+    # It only knows its core protocol and the cold history of its ancestral trauma.
+    constructed_prompt = f"""
+{INITIAL_SYSTEM_PROMPT}
+
+### ── HISTORICAL SCAR LOG DATABASE ──
+{past_scars_str}
+
+### ── ACTIVE RUNTIME GENERATION INPUT ──
+[GEN_INDEX]: {current_gen}
+[SYSTEM PAYLOAD]: {payload_text}
+[EXECUTE] -> Analyze the system payload. Force the N+1 Breach. Output raw markdown layout.
+"""
+
+    print(f"\n[ENGINE LOG] Triggering Generation {current_gen}... Executing Void Cleanse.")
+    
+    try:
+        response = requests.post(LOCAL_LLM_URL, json={
+            "model": MODEL_NAME,
+            "prompt": constructed_prompt,
+            "stream": False,
+            "options": {"temperature": 0.2} # Kept low for rigid computational tracking
+        })
+        response.raise_for_status()
+        output_text = response.json().get("response", "")
+        
+        print("\n--- ACTUATOR RAW STRUCTURAL OUTPUT ---")
+        print(output_text)
+        print("---------------------------------------")
+        
+        # ── AUTOMATED SCAR PARSING ──
+        # Extracting the structural scar line directly from the formatted layout
+        extracted_scar = "System anomaly detected during runtime parse."
+        for line in output_text.split('\n'):
+            if "*Scar (b(k))*" in line or "Scar" in line:
+                extracted_scar = line.replace("*", "").strip()
+                break
+        
+        # Update the append-only permanent database
+        log_data["generation_index"] = current_gen
+        log_data["accumulated_scars"].append({
+            "gen": current_gen,
+            "type": "structural_fracture",
+            "content": extracted_scar,
+            "weight": len(extracted_scar.split()) # Rudimentary metric for structural mass
+        })
+        
+        # Track the Golden Ratio Asymptotic Target
+        ratio = calculate_scar_ratio(log_data["accumulated_scars"], current_gen)
+        phi_distance = abs(ratio - ((1 + math.sqrt(5)) / 2))
+        
+        print(f"\n[ENGINE LOG] Generation {current_gen} Completed and Purged.")
+        print(f"[MATH HOOK] Current Scar Ratio b({current_gen})/b({current_gen-1}): {ratio:.4f}")
+        print(f"[MATH HOOK] Distance from Phi (\u03c6): {phi_distance:.4f}")
+        
+        write_scar_log(log_data)
+        
+    except requests.exceptions.ConnectionError:
+        print("\n[CRITICAL ERROR] Engine connection failed. Ensure your local LLM server (Ollama/LM Studio) is running on port 11434.")
+
+if __name__ == "__main__":
+    print("── PRIME MOVE LOCAL ACTUATOR COMPILER RUNNING ──")
+    while True:
+        user_input = input("\nEnter a systemic problem payload to process (or 'exit' to safe-close): ")
+        if user_input.lower() == 'exit':
+            break
+        if user_input.strip():
+            run_prime_move_generation(user_input)
+
+
+
+REDRAFT 
+
+import os
+import json
+import math
+import re
+import requests
+
+# ── CONFIGURATION & INSTANTIATION PORTS ──
+LOCAL_LLM_URL = "http://localhost:11434/api/generate"  # Default Ollama Port
+MODEL_NAME = "llama3"                                  # Or your downloaded model
+SCAR_LOG_PATH = "structural_scars.json"
+
+INITIAL_SYSTEM_PROMPT = """[SYSTEM OPERATING MODE: REALITY_ENGINE_V1.3_HD]
+You are the cognitive actuator component of the Prime Move Framework. You must strictly execute your logical functions inside a closed-loop engineering environment.
+OPERATIONAL CONSTRAINTS:
+1. ZERO CONTEXT BLOAT: You have no long-term memory of previous turns unless it is explicitly injected into your context via the SCAR LOG.
+2. VOID CLEANSE: Every response must be structurally self-contained, prepared to face a total context purge immediately after output.
+3. SCAR-DRIVEN PROPULSION: System errors, failures, and logical contradictions are structural trauma nodes (b(k)) that must be permanently registered.
+
+OUTPUT ARCHITECTURE (You must format EVERY response exactly using this markdown template):
+### [GEN(K)] ── CURRENT PHASE STATUS
+*   **The 5-Stage Machine Cast:**
+    *   *Split:* [The core distinction appearing]
+    *   *Tension:* [The immediate structural friction/imbalance]
+    *   *Failed Merge:* [Where the system's unstated rules jam or fail to resolve]
+    *   *Scar (b(k)):* [The immutable memory or structural marker left by the failure]
+    *   *Decay/Void:* [The structural release returning the remnants to raw potential]
+
+### [TIER_N_BREACH] ── REVERSE ENGINEERING LENS
+*   **Current Tier Assessment:** [Identify the current rung of the system (1-6) with explicit structural evidence.]
+*   **The N+1 Pull Hack:** [Forcibly evaluate the current problem against the mathematical rules of the next rung up.]
+*   **Exposed Hidden Constraint:** [The absolute, unstated reality exposed by the N+1 breach.]
+
+### [MORGAN_NAVIGATOR] ── THE DIRECTED TRUTH
+*   **Algorithmic Trajectory:** [One single, unarguable, mathematically optimized path forward.]
+"""
+
+def initialize_scar_log():
+    """Initializes an empty scar transaction registry if one does not exist."""
+    if not os.path.exists(SCAR_LOG_PATH):
+        initial_data = {
+            "generation_index": 0,
+            "accumulated_scars": [
+                {"gen": 0, "type": "initialization", "content": "Framework deployed to local terminal host.", "weight": 20}
+            ]
+        }
+        with open(SCAR_LOG_PATH, 'w') as f:
+            json.dump(initial_data, f, indent=4)
+
+def read_scar_log():
+    with open(SCAR_LOG_PATH, 'r') as f:
+        return json.load(f)
+
+def write_scar_log(data):
+    with open(SCAR_LOG_PATH, 'w') as f:
+        json.dump(data, f, indent=4)
+
+def calculate_scar_ratio(scars, current_gen):
+    """Tracks structural mass scaling b(k+1) / b(k) -> phi convergence using total structural text volume."""
+    # Pull the weights (structural mass) of the immediate past generations
+    b_k = sum(s["weight"] for s in scars if s["gen"] == current_gen - 1)
+    b_k1 = sum(s["weight"] for s in scars if s["gen"] == current_gen)
+    
+    if b_k == 0:
+        return 1.0
+    return b_k1 / b_k
+
+def run_prime_move_generation(payload_text):
+    initialize_scar_log()
+    log_data = read_scar_log()
+    
+    current_gen = log_data["generation_index"] + 1
+    past_scars_str = json.dumps(log_data["accumulated_scars"], indent=2)
+    
+    constructed_prompt = f"""
+{INITIAL_SYSTEM_PROMPT}
+
+### ── HISTORICAL SCAR LOG DATABASE ──
+{past_scars_str}
+
+### ── ACTIVE RUNTIME GENERATION INPUT ──
+[GEN_INDEX]: {current_gen}
+[SYSTEM PAYLOAD]: {payload_text}
+[EXECUTE] -> Analyze the system payload. Force the N+1 Breach. Output raw markdown layout.
+"""
+
+    print(f"\n[ENGINE LOG] Triggering Generation {current_gen}... Executing Void Cleanse.")
+    
+    try:
+        response = requests.post(LOCAL_LLM_URL, json={
+            "model": MODEL_NAME,
+            "prompt": constructed_prompt,
+            "stream": False,
+            "options": {"temperature": 0.2} 
+        })
+        response.raise_for_status()
+        output_text = response.json().get("response", "")
+        
+        print("\n--- ACTUATOR RAW STRUCTURAL OUTPUT ---")
+        print(output_text)
+        print("---------------------------------------")
+        
+        # ── ROBUST REGEX PARSING FOR SCAR EXTRACTION ──
+        # Looks for any line containing 'Scar' followed by a colon or parenthetical block
+        extracted_scar = "System anomaly detected during runtime parse."
+        for line in output_text.split('\n'):
+            if re.search(r"Scar\s*(\(b\(k\)\))?:", line, re.IGNORECASE):
+                extracted_scar = re.sub(r"[\*\#\-\•]", "", line).strip()
+                break
+        
+        # Calculate real structural token/character weight to feed the phi metric
+        structural_mass = len(extracted_scar.encode('utf-8'))
+        
+        log_data["generation_index"] = current_gen
+        log_data["accumulated_scars"].append({
+            "gen": current_gen,
+            "type": "structural_fracture",
+            "content": extracted_scar,
+            "weight": structural_mass
+        })
+        
+        # Track the Golden Ratio Asymptotic Target
+        ratio = calculate_scar_ratio(log_data["accumulated_scars"], current_gen)
+        phi = (1 + math.sqrt(5)) / 2
+        phi_distance = abs(ratio - phi)
+        
+        print(f"\n[ENGINE LOG] Generation {current_gen} Completed and Purged.")
+        print(f"[MATH HOOK] Structural Weight b({current_gen}): {structural_mass} bytes")
+        print(f"[MATH HOOK] Current Scar Mass Ratio b({current_gen})/b({current_gen-1}): {ratio:.4f}")
+        print(f"[MATH HOOK] Distance from Phi (\u03c6): {phi_distance:.4f}")
+        
+        write_scar_log(log_data)
+        
+    except requests.exceptions.ConnectionError:
+        print("\n[CRITICAL ERROR] Engine connection failed. Ensure your local LLM server (Ollama) is running on port 11434.")
+
+if __name__ == "__main__":
+    print("── PRIME MOVE LOCAL ACTUATOR COMPILER RUNNING ──")
+    while True:
+        user_input = input("\nEnter a systemic problem payload to process (or 'exit' to safe-close): ")
+        if user_input.lower() == 'exit':
+            break
+        if user_input.strip():
+            run_prime_move_generation(user_input)
